@@ -1,0 +1,4044 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JDM PORTFOLIO</title>
+		<link rel="stylesheet" href="./lib/setup.css" type="text/css" />
+		<link rel="stylesheet" href="./lib/font.css" />
+		<script src="./lib/jquery.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="./lib/jquery.fullpage.js"></script>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css"
+		/>
+		<link rel="stylesheet" href="lib/jquery.fullpage.css" />
+		<script src="https://unpkg.com/typeit@8.3.3/dist/index.umd.js"></script>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="lib/favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="lib/favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="lib/favicon/favicon-16x16.png" />
+		<link rel="manifest" href="lib/favicon/site.webmanifest" />
+		<link rel="mask-icon" href="lib/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+		<meta name="msapplication-TileColor" content="#da532c" />
+		<meta name="theme-color" content="#ffffff" />
+
+		<style>
+			:root {
+				--color-font1: #111;
+				--color-font2: #fff;
+				--color-font3: #0075ff;
+				--color-border1: #292020;
+				--color-bg: #fbfbfd;
+				--font-family900: 'Pretendard-Black';
+				--font-family700: 'Pretendard-Bold';
+				--font-family500: 'Pretendard-Medium';
+				--font-family400: 'Pretendard-Regular';
+				--font-family300: 'Pretendard-LIGHT';
+			}
+			body {
+				overflow: hidden !important;
+				color: var(--color-font1);
+				font-family: 'Pretendard-Black', 'Pretendard-ExtraBold', 'Pretendard-Medium', 'Pretendard-Regular',
+					'Pretendard-LIGHT';
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				word-break: keep-all;
+			}
+			body.no-scroll {
+				overflow: hidden !important;
+			}
+			/* 헤더 */
+			header {
+				width: 100%;
+				height: 60px;
+				background: transparent;
+				position: fixed;
+				z-index: 800;
+				border-bottom: 1px solid #ddd;
+				font-family: 'Pretendard-Medium';
+				color: #ddd;
+				mix-blend-mode: difference;
+				opacity: 0;
+				animation: header 1s 5s forwards;
+			}
+			@keyframes header {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			header .header_wrap {
+				max-width: 1280px;
+				height: 60px;
+				margin: 0 auto;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			header.none {
+			}
+
+			/* 헤더 메뉴 */
+			header .header_wrap ul {
+				position: relative;
+				z-index: 999;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			header .header_wrap ul li {
+				border-right: 1px solid transparent;
+				border-left: 1px solid transparent;
+				margin-left: -1px;
+			}
+			header .header_wrap ul li.active {
+				border-right: 1px solid #fff;
+				border-left: 1px solid #fff;
+			}
+			header .header_wrap ul li.subpage_on {
+				border-right: 1px solid #fff;
+				border-left: 1px solid #fff;
+			}
+			header .header_wrap ul li a {
+				padding: 20px 29px 19px;
+			}
+			header .header_wrap ul li a:hover {
+				opacity: 0.5;
+			}
+			/* 오른쪽 로고 */
+			.rightButton {
+				height: 100vh;
+				writing-mode: vertical-rl;
+				text-orientation: upright;
+				position: fixed;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 24px;
+				z-index: 50;
+				color: #ddd;
+				mix-blend-mode: difference;
+				animation: fadeR 0.2s 3.1s forwards;
+				opacity: 0;
+			}
+			.rightButton_wrap {
+			}
+			@keyframes fadeR {
+				100% {
+					opacity: 1;
+				}
+			}
+			.rightButton > a span.span {
+				/* margin-bottom: 60px; */
+			}
+			.rightButton .rightButton_wrap > a {
+				display: grid;
+				grid-template-columns: repeat(18, 1fr);
+				padding: 110px 0 50px;
+				font-size: 1.4359vh;
+			}
+			.rightButton .rightButton_wrap > a span:last-child {
+				margin: 0;
+			}
+			/* main */
+			.section.main {
+				background: var(--color-font1);
+				font-family: var(--font-family700);
+				position: relative;
+			}
+			/* .main::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				background: #fbfbfd;
+			} */
+
+			.main .anima {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background: #fbfbfd;
+				animation: mainBg 0.5s 3s forwards;
+				z-index: 999;
+			}
+			@keyframes mainBg {
+				90% {
+					background: #111;
+				}
+				99% {
+					opacity: 0;
+				}
+				100% {
+					display: none;
+				}
+			}
+			.main .animaBar {
+				/* clip-path: polygon(55% 6%, 55% 48%, 55% 90%, 55% 48%);
+				overflow: hidden;
+
+				animation: polygon 4s 1s forwards;
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				padding: 80px 0;
+				background: rgba(255, 255, 255, 1); */
+				width: 20%;
+				height: 2px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				background: #111;
+				z-index: 999;
+			}
+			.main .animaBar::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				background: #fdfdfb;
+				animation: mainLine 2s 0.6s ease-in forwards;
+			}
+			@keyframes mainLine {
+				/* 20% {
+					clip-path: polygon(74.5% 3%, 96.5% 48%, 74.5% 93%, 54.5% 48%);
+				}
+				30% {
+					clip-path: polygon(74.5% 3%, 96.5% 48%, 74.5% 93%, 54.5% 48%);
+				}
+				50% {
+					clip-path: polygon(9% 50%, 51% 75%, 47.5% 100%, 2% 100%);
+				}
+
+				80% {
+					clip-path: polygon(3% 5%, 47% 5%, 47% 93%, 3% 93%);
+					background: rgba(255, 255, 255, 1);
+				}
+				100% {
+					clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+					background: #111;
+				} */
+				50% {
+					width: 70%;
+				}
+				70% {
+					width: 80%;
+				}
+				90% {
+					width: 70%;
+				}
+				99% {
+					width: 0%;
+				}
+				100% {
+					display: none;
+				}
+			}
+
+			.main .main_wrap {
+				margin: 0 13% 0 4%;
+
+				color: var(--color-font2);
+			}
+			.main .main_wrap .contents {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.main .main_wrap .mainMenu {
+				display: inline-flex;
+				flex-direction: column;
+				align-items: flex-start;
+				/* transform: translate(0px, 70%) rotate(15deg); */
+				animation: deg 0.2s 3.1s forwards;
+				opacity: 0;
+				z-index: 999;
+			}
+			@keyframes deg {
+				100% {
+					/* transform: translate(0px, 0%) rotate(0deg); */
+					opacity: 1;
+				}
+			}
+			.main .main_wrap .mainMenu li {
+				margin: 20px 0;
+				position: relative;
+				/* font-family: var(--font-family900); */
+			}
+			.main .main_wrap .mainMenu li::before {
+				transition: all 0.75s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+				content: '';
+				width: 0%;
+				height: 110%;
+				background: black;
+				position: absolute;
+				top: -5%;
+				left: 0;
+			}
+			.main .main_wrap .mainMenu li:hover::before {
+				background: white;
+				width: 100%;
+			}
+			.main .main_wrap .mainMenu li:first-child {
+				color: var(--color-font3);
+				/* margin-top: 0; */
+			}
+			.main .main_wrap .mainMenu li:last-child {
+				margin-bottom: 0;
+			}
+			.main .main_wrap .mainMenu li a {
+				font-size: 8.5vw;
+				font-weight: 700;
+				line-height: 6vw;
+				mix-blend-mode: difference;
+			}
+
+			.main .main_wrap .text {
+				display: inline-flex;
+				flex-direction: column;
+				align-items: flex-end;
+				z-index: 999;
+				opacity: 0;
+				animation: mainText 0.2s 3.1s forwards;
+			}
+			@keyframes mainText {
+				100% {
+					/* transform: translate(0px, 0%) rotate(0deg); */
+					opacity: 1;
+				}
+			}
+			.main .main_wrap .text .name {
+				display: flex;
+				align-items: baseline;
+				gap: 20px;
+				font-size: 2.4vw;
+				font-family: var(--font-family300);
+				position: relative;
+			}
+			.main .main_wrap .text .name span {
+				font-family: var(--font-family700);
+				font-size: 4.15vw;
+			}
+			.main .main_wrap .text .sub {
+				font-size: 1.66vw;
+				font-family: var(--font-family300);
+				text-align: right;
+				color: rgba(255, 255, 255, 0.5);
+			}
+
+			/* about */
+			.about {
+				position: relative;
+			}
+			.about .about_wrap .contents {
+				width: 100%;
+				max-width: 1280px;
+				margin: 0 auto;
+				position: relative;
+				z-index: 2;
+				opacity: 1;
+				max-height: 1000px;
+			}
+			.about .about_wrap .contents.view {
+				max-height: 0;
+				overflow: hidden;
+			}
+			.about .about_wrap .contents .text {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				z-index: 3;
+				text-align: left;
+			}
+			.about .about_wrap .contents .text .title {
+				font-size: 60px;
+				font-weight: 900;
+				line-height: 60px;
+				margin-bottom: 25px;
+				font-family: var(--font-family900);
+			}
+			.about .about_wrap .contents .text .name {
+				font-size: 40px;
+				font-weight: 900;
+				line-height: 50px;
+				margin-bottom: 15px;
+				font-family: var(--font-family900);
+			}
+			.about .about_wrap .contents .text .sub {
+				font-size: 20px;
+				font-weight: 400;
+				font-family: var(--font-family500);
+			}
+			.about .about_wrap .contents .aboutlogoBox {
+				width: 100%;
+				max-width: 960px;
+				height: 540px;
+				margin: 0 auto;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.about .about_wrap .contents .aboutlogoBox img {
+				cursor: pointer;
+			}
+			.about .about_wrap .contents .aboutlogoBox .logoBox_wrap {
+				position: relative;
+				z-index: 1;
+			}
+			.about .logoBoxHover {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.8);
+				color: var(--color-font2);
+				z-index: 0;
+				transition: 0.5s;
+				overflow: hidden;
+				opacity: 0;
+			}
+			.about .logoBoxHover.hover {
+				z-index: 3;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				opacity: 1;
+			}
+			.about .logoBoxHover div {
+				opacity: 0;
+			}
+			.about .logoBoxHover .title {
+				font-size: 100px;
+			}
+			.about .logoBoxHover.hover div {
+				opacity: 1;
+				/* transition-delay: 0.6s; */
+			}
+			.about .logoBoxHover .aboutBtn {
+				width: 110px;
+				height: 42px;
+				border-radius: 42px;
+				border: 1px solid #000;
+				background: #fff;
+				padding: 11px 20px 11px 22px;
+				display: inline-flex;
+				justify-content: space-around;
+				align-items: center;
+				font-size: 12px;
+				cursor: pointer;
+				color: #111;
+			}
+			.about .aboutBtnMb {
+				display: none;
+			}
+			.about .about_wrap .contents .line {
+				width: 100%;
+				max-width: 960px;
+				position: absolute;
+				top: calc(100% + 40px);
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-family: var(--font-family500);
+			}
+			.about .about_wrap .contents .line p {
+				font-size: 20px;
+			}
+			.about .about_wrap .contents .line .p2 {
+				display: flex;
+				align-items: baseline;
+			}
+			.about .about_wrap .contents .line > span {
+				display: block;
+				width: 85%;
+				height: 1px;
+				background-color: #111;
+				position: relative;
+			}
+			.about .about_wrap .contents .line > span::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 1px;
+				background: #fbfbfd;
+				transition: 0.1s;
+				transition-delay: 0.5s;
+			}
+			.about.active .about_wrap .contents .line > span::after {
+				transition: 0.8s;
+				transition-delay: 0.8s;
+				width: 0;
+			}
+
+			.about .about_wrap .contents2 {
+				width: 100%;
+				max-width: 1280px;
+				margin: 0 auto;
+				position: relative;
+				z-index: 2;
+				max-height: 0;
+				overflow: hidden;
+			}
+			.about .about_wrap .contents2.view {
+				max-height: 1000px;
+				overflow: unset;
+			}
+			.about .about_wrap .contents2 .text {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				z-index: 2;
+				text-align: left;
+			}
+			.about .about_wrap .contents2 .text .title {
+				font-size: 60px;
+				font-weight: 900;
+				line-height: 60px;
+				margin-bottom: 25px;
+				font-family: var(--font-family900);
+			}
+			.about .about_wrap .contents2 .text .name {
+				font-size: 40px;
+				font-weight: 900;
+				line-height: 50px;
+				margin-bottom: 15px;
+				font-family: var(--font-family900);
+			}
+			.about .about_wrap .contents2 .text .sub {
+				font-size: 20px;
+				font-weight: 400;
+				font-family: var(--font-family500);
+			}
+			.about .about_wrap .contents2 .aboutlogoBox {
+				width: 100%;
+				max-width: 960px;
+				height: 540px;
+				margin: 0 auto;
+				border: 1px solid #e0e0e0;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.about .about_wrap .contents2 .aboutlogoBox .swiper-wrapper {
+				transition-timing-function: linear;
+			}
+			.about .about_wrap .contents2 .aboutlogoBox::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(90deg, #fbfbfd 0%, rgba(255, 255, 255, 0) 51.04%, #fbfbfd 100%);
+				z-index: 1;
+			}
+			.about .about_wrap .contents2 .aboutlogoBox .logoBox_wrap {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				z-index: 1;
+			}
+			.about .about_wrap .contents2 .aboutlogoBox .aboutBtn2 {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				cursor: pointer;
+				z-index: 5;
+				box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+				border-radius: 50%;
+			}
+			.about .about_wrap .contents2 .aboutlogoBox .logoBox_wrap .slider1 {
+				width: 100%;
+				margin-top: 90px;
+				overflow: hidden;
+			}
+			.about .about_wrap .contents2 .aboutlogoBox .logoBox_wrap .slider2 {
+				width: 100%;
+				margin-top: 60px;
+				overflow: hidden;
+			}
+			.about .about_wrap .contents2 .line {
+				width: 100%;
+				max-width: 960px;
+				position: absolute;
+				top: calc(100% + 40px);
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-family: var(--font-family500);
+			}
+			.about .about_wrap .contents2 .line p {
+				font-size: 20px;
+			}
+			.about .about_wrap .contents2 .line .p2 {
+				display: flex;
+				align-items: baseline;
+			}
+			.about .about_wrap .contents2 .line > span {
+				display: block;
+				width: 85%;
+				height: 1px;
+				background-color: #111;
+				position: relative;
+			}
+			.about .about_wrap .contents2 .line > span::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 1px;
+				background: #fbfbfd;
+				transition: 0.1s;
+				transition-delay: 0.5s;
+			}
+			.about.active .about_wrap .contents2.view .line > span::after {
+				transition: 0.8s;
+				transition-delay: 0.2s;
+				width: 0;
+			}
+
+			/* web portfolio */
+			.section {
+				background: var(--color-bg);
+			}
+
+			/* web portfolio 배경 */
+			.section .webBg {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+				opacity: 0;
+				filter: blur(40px);
+				transition: 0.5s;
+				transition-delay: 0.1s;
+			}
+			.section#nike .webBg {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='442' height='173' fill='none'%3E%3Cpath fill='%23000' d='M442 0 118.638 153.952C91.823 166.637 69.299 173 51.085 173c-20.627 0-35.6-8.072-44.882-24.238-5.838-10.378-7.55-23.537-5.157-39.497 2.395-15.96 8.767-32.948 19.08-51.029 8.6-14.62 22.69-33.834 42.304-57.66-6.653 11.711-11.532 24.569-14.44 38.056-5.156 24.608-.515 42.668 13.924 54.2 6.87 5.375 16.317 8.073 28.362 8.073 9.613 0 20.442-1.73 32.487-5.19L442 0Z'/%3E%3C/svg%3E");
+				background-position: center;
+				background-size: 90% auto;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 100%;
+			}
+
+			.section#samcheop .webBg {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1631' height='1583' fill='none'%3E%3Cpath fill='%23C21920' fill-opacity='.8' fill-rule='evenodd' d='M603.74 981.22c-144.446-71.23-247.925-212.902-265.586-380.166C179.225 679.426 69.891 843.075 69.891 1032.26c0 265.37 215.126 480.5 480.499 480.5 98.192 0 189.504-29.45 265.585-80.01-129.534-86.07-214.914-233.31-214.914-400.49 0-17.24.908-34.269 2.679-51.04Z' clip-rule='evenodd'/%3E%3Cpath fill='%23F3F4F3' fill-rule='evenodd' d='m678.362 940.098-5.118 48.467a416.002 416.002 0 0 0-2.292 43.705c0 142.79 72.833 268.61 183.703 342.28l87.605 58.21-87.605 58.21c-87.188 57.93-191.891 91.69-304.265 91.69C246.418 1582.66 0 1336.24 0 1032.27c0-216.809 125.366-404.204 307.244-493.893l89.891-44.328 10.524 99.673c15.069 142.718 103.416 263.882 226.992 324.821l43.711 21.555ZM338.155 601.06a480.313 480.313 0 0 0-65.251 38.882C150.067 726.982 69.891 870.261 69.891 1032.27c0 265.37 215.127 480.5 480.499 480.5 70.529 0 137.51-15.2 197.845-42.5a479.12 479.12 0 0 0 67.74-37.51 482.38 482.38 0 0 1-58.568-45.8c-96.082-87.86-156.346-214.24-156.346-354.69 0-17.24.908-34.272 2.679-51.044-123.214-60.76-216.619-172.775-252.377-308.209a478.62 478.62 0 0 1-13.208-71.957Z' clip-rule='evenodd'/%3E%3Cpath fill='%23DAD0C7' fill-opacity='.8' fill-rule='evenodd' d='M1296.48 550.386c0 17.241-.91 34.269-2.68 51.04-64-31.561-136.05-49.293-212.24-49.293-98.188 0-189.5 29.454-265.581 80.007-76.081-50.553-167.393-80.007-265.585-80.007-76.187 0-148.233 17.732-212.236 49.293a485.907 485.907 0 0 1-2.679-51.04c0-265.372 215.127-480.5 480.5-480.5 265.371 0 480.501 215.128 480.501 480.5Z' clip-rule='evenodd'/%3E%3Cpath fill='%23F3F4F3' fill-rule='evenodd' d='m1352.77 708.442-89.89-44.328c-54.6-26.926-116.09-42.086-181.32-42.086-84.011 0-161.933 25.154-226.907 68.328l-38.68 25.702-38.68-25.702c-64.974-43.174-142.896-68.328-226.905-68.328-65.232 0-126.723 15.16-181.324 42.086l-89.892 44.328-10.524-99.673a555.804 555.804 0 0 1-3.065-58.379C265.583 246.418 512.001 0 815.973 0c303.977 0 550.387 246.418 550.387 550.39a555.24 555.24 0 0 1-3.06 58.379l-10.53 99.673Zm-58.98-107.012a486.177 486.177 0 0 0 2.68-51.04c0-8.335-.21-16.621-.63-24.852-12.93-253.822-222.83-455.647-479.867-455.647-257.037 0-466.935 201.825-479.868 455.647a488.816 488.816 0 0 0-.631 24.852c0 17.241.908 34.269 2.679 51.04a477.293 477.293 0 0 1 67.888-27.233c45.563-14.332 94.052-22.06 144.347-22.06 98.192 0 189.504 29.454 265.585 80.007 76.081-50.553 167.393-80.007 265.587-80.007 50.29 0 98.78 7.728 144.34 22.06a477.081 477.081 0 0 1 67.89 27.233Z' clip-rule='evenodd'/%3E%3Cpath fill='%23F4B01B' fill-rule='evenodd' d='M1292.05 601.054c-17.66 167.263-121.14 308.936-265.59 380.166a486.19 486.19 0 0 1 2.68 51.04c0 167.18-85.379 314.42-214.913 400.49 76.08 50.56 167.393 80.01 265.583 80.01 265.37 0 480.5-215.13 480.5-480.5 0-189.185-109.33-352.834-268.26-431.206Z' clip-rule='evenodd'/%3E%3Cpath fill='%23F3F4F3' fill-rule='evenodd' d='m1233.07 494.049 89.89 44.328c181.88 89.689 307.24 277.084 307.24 493.893 0 303.97-246.41 550.39-550.39 550.39-112.37 0-217.073-33.76-304.261-91.69l-87.605-58.21 87.605-58.21c110.87-73.67 183.704-199.49 183.704-342.28 0-14.79-.779-29.37-2.292-43.705l-5.118-48.467 43.711-21.555c123.576-60.939 211.926-182.103 226.996-324.821l10.52-99.673ZM872.797 1386.96c96.082-87.86 156.343-214.24 156.343-354.69 0-17.24-.9-34.272-2.67-51.044 123.21-60.76 216.61-172.775 252.37-308.209a479.378 479.378 0 0 0 13.21-71.957 480.547 480.547 0 0 1 65.25 38.882c122.84 87.039 203.01 230.319 203.01 392.328 0 265.37-215.12 480.5-480.5 480.5-70.52 0-137.505-15.2-197.841-42.5a479.164 479.164 0 0 1-67.739-37.51 482.37 482.37 0 0 0 58.567-45.8Z' clip-rule='evenodd'/%3E%3Cpath fill='%23EF897F' fill-rule='evenodd' d='M551.206 552.133c-76.187 0-148.233 17.731-212.235 49.293 17.66 167.264 121.139 308.936 265.585 380.167 15.4-145.859 96.059-272.257 212.236-349.453-76.081-50.554-167.394-80.007-265.586-80.007Z' clip-rule='evenodd'/%3E%3Cpath fill='%23C21920' fill-rule='evenodd' d='M603.74 981.22c-144.446-71.23-247.925-212.902-265.586-380.166C179.225 679.426 69.891 843.075 69.891 1032.26c0 265.37 215.126 480.5 480.499 480.5 98.192 0 189.504-29.45 265.585-80.01-129.534-86.07-214.914-233.31-214.914-400.49 0-17.24.908-34.269 2.679-51.04Z' clip-rule='evenodd'/%3E%3Cpath fill='%23542623' fill-rule='evenodd' d='M816.79 632.518c116.176 77.196 196.84 203.594 212.24 349.452-64.007 31.56-136.053 49.29-212.24 49.29-76.187 0-148.233-17.73-212.235-49.29 15.4-145.858 96.059-272.256 212.235-349.452Z' clip-rule='evenodd'/%3E%3Cpath fill='%23F6DD73' fill-rule='evenodd' d='M1026.46 981.593c144.45-71.231 247.93-212.903 265.59-380.167-64.01-31.562-136.05-49.293-212.24-49.293-98.19 0-189.503 29.453-265.583 80.007 116.176 77.196 196.833 203.594 212.233 349.453Z' clip-rule='evenodd'/%3E%3Cpath fill='%23DAD0C7' fill-rule='evenodd' d='M1296.48 550.386c0 17.241-.91 34.269-2.68 51.04-64-31.561-136.05-49.293-212.24-49.293-98.188 0-189.5 29.454-265.581 80.007-76.081-50.553-167.393-80.007-265.585-80.007-76.187 0-148.233 17.732-212.236 49.293a485.907 485.907 0 0 1-2.679-51.04c0-265.372 215.127-480.5 480.5-480.5 265.371 0 480.501 215.128 480.501 480.5Z' clip-rule='evenodd'/%3E%3Cpath fill='%23F4B01B' fill-rule='evenodd' d='M1292.05 601.054c-17.66 167.263-121.14 308.936-265.59 380.166a486.19 486.19 0 0 1 2.68 51.04c0 167.18-85.379 314.42-214.913 400.49 76.08 50.56 167.393 80.01 265.583 80.01 265.37 0 480.5-215.13 480.5-480.5 0-189.185-109.33-352.834-268.26-431.206Z' clip-rule='evenodd'/%3E%3Cpath fill='%23EB5E3C' fill-rule='evenodd' d='M1028.21 981.965c-64 31.565-136.046 49.295-212.233 49.295-76.187 0-148.233-17.73-212.236-49.295a485.826 485.826 0 0 0-2.679 51.035c0 167.18 85.38 314.42 214.915 400.5 129.534-86.08 214.913-233.32 214.913-400.5 0-17.24-.91-34.264-2.68-51.035Z' clip-rule='evenodd'/%3E%3C/svg%3E");
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 200%;
+				height: 200%;
+			}
+			.section#dasoni .webBg {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1719' height='2079' fill='none'%3E%3Cpath fill='%235CA775' fill-opacity='.95' d='m559.871 166.434 444.639 46.296 281.66 347.141-46.29 444.639-347.142 281.66-444.636-46.29-281.668-347.142 46.296-444.636 347.141-281.668Z'/%3E%3Cpath fill='%23F1D566' fill-opacity='.7' d='m1143.85 295.749 384.59 142.977 170.85 373.049-142.97 384.595-373.05 170.85-384.599-142.98-170.85-373.046 142.977-384.595 373.052-170.85Z'/%3E%3Cpath fill='%23804FD0' fill-opacity='.8' d='m1102.29 809.276 315.05 46.905 189.61 255.939-46.9 315.06-255.95 189.61-315.052-46.91-189.609-255.94 46.905-315.054 255.946-189.61Z'/%3E%3Cpath fill='%23EBAA70' fill-opacity='.8' d='m783.912 1151.12 314.578-50 257.8 187.08 50 314.58-187.08 257.79-314.581 50-257.797-187.08-50.002-314.57 187.082-257.8Z'/%3E%3C/svg%3E");
+				background-position: 47% center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 250%;
+				height: 250%;
+			}
+			.section#halo .webBg {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1713' height='795' fill='none'%3E%3Cpath fill='%23222' d='M1574.09 793.85c-12.52 0-22.66-10.142-22.66-22.654V659.174c0-43.035 34.89-77.921 77.92-77.921 52.78 0 83.65 29.376 83.65 74.187 0 45.309-30.87 74.685-83.65 74.685h-32.61v41.071c0 12.512-10.14 22.654-22.65 22.654Zm22.65-103.806h30.62c25.15 0 40.33-11.95 40.33-34.604 0-22.406-15.18-34.106-40.33-34.106-16.91 0-30.62 13.709-30.62 30.621v38.089ZM1414.97 794.101c-62.98 0-109.54-45.06-109.54-106.55 0-61.491 46.56-106.551 109.54-106.551 62.98 0 109.54 45.06 109.54 106.551 0 61.49-46.56 106.55-109.54 106.55Zm0-40.828c36.84 0 64.23-27.633 64.23-65.722 0-38.339-27.39-65.723-64.23-65.723-36.85 0-64.23 27.384-64.23 65.723 0 38.089 27.38 65.722 64.23 65.722ZM1233.2 608.883c0-12.512 10.14-22.654 22.65-22.654 12.51 0 22.65 10.142 22.65 22.654v157.585c0 12.512-10.14 22.655-22.65 22.655-12.51 0-22.65-10.143-22.65-22.655V706.72h-89.63v59.748c0 12.512-10.14 22.655-22.65 22.655-12.51 0-22.66-10.143-22.66-22.655V608.883c0-12.512 10.15-22.654 22.66-22.654s22.65 10.142 22.65 22.654v57.756h89.63v-57.756ZM989.497 581.246c34.793 0 62.823 16.291 74.983 41.323 6.14 12.631-5.41 24.898-19.45 24.898-12.04 0-21.35-10.044-29.94-18.482-6.48-6.363-16.133-9.899-28.58-9.899-21.161 0-32.861 8.465-32.861 20.663 0 15.186 15.683 20.414 55.271 28.63 46.8 9.709 62.73 32.861 62.73 63.233 0 38.836-36.59 62.486-81.904 62.486-39.749 0-71.015-17.123-83.191-45.878-5.373-12.687 6.082-24.575 19.86-24.575 12.154 0 21.751 10.091 30.047 18.974 7.857 8.412 20.466 13.39 36.521 13.39 18.417 0 32.117-9.211 32.117-22.406 0-16.181-13.7-22.654-49.793-29.376-44.064-8.215-67.963-26.388-67.963-64.478 0-36.595 36.347-58.503 82.153-58.503ZM691.346 213.101c-62.985 0-109.538-45.06-109.538-106.55C581.808 45.06 628.361 0 691.346 0c62.984 0 109.537 45.06 109.537 106.551 0 61.49-46.553 106.55-109.537 106.55Zm0-40.828c36.844 0 64.229-27.633 64.229-65.722 0-38.339-27.385-65.723-64.229-65.723-36.845 0-64.23 27.384-64.23 65.723 0 38.089 27.385 65.722 64.23 65.722ZM425.452 27.883c0-12.512 10.143-22.654 22.655-22.654 12.511 0 22.654 10.142 22.654 22.654v89.497c0 27.98 22.682 50.662 50.661 50.662h30.621c11.068 0 20.041 8.972 20.041 20.04s-8.973 20.041-20.041 20.041h-53.275c-40.491 0-73.316-32.825-73.316-73.316V27.883ZM370.958 208.123a23.369 23.369 0 0 1-21.982-15.439l-8.621-23.895h-78.668l-9.032 25.036a21.643 21.643 0 0 1-20.358 14.298c-15.213 0-25.678-15.282-20.178-29.466l58.739-151.494a34.355 34.355 0 0 1 64.061 0l57.827 149.143c5.938 15.316-5.362 31.817-21.788 31.817Zm-95.33-78.669h50.786l-24.452-68.08c-.317-.884-1.565-.884-1.882 0l-24.452 68.08ZM134.931 27.883c0-12.512 10.143-22.654 22.654-22.654 12.512 0 22.655 10.142 22.655 22.654v157.585c0 12.512-10.143 22.655-22.655 22.655-12.511 0-22.654-10.143-22.654-22.655V125.72H45.309v59.748c0 12.512-10.143 22.655-22.655 22.655C10.143 208.123 0 197.98 0 185.468V27.883C0 15.37 10.143 5.229 22.654 5.229c12.512 0 22.655 10.142 22.655 22.654v57.756h89.622V27.883Z'/%3E%3C/svg%3E");
+				background-position: center;
+				background-size: 100% auto;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 100%;
+			}
+			/* 반응형은 백그라운드 삭제*/
+			.section .webBgHalo.webBgHover {
+				opacity: 0.5;
+				/* filter: blur(40px);
+				z-index: 1; */
+				transition: 0.8s;
+				transition-delay: 0.2s;
+			}
+			.section .webBgDasoni.webBgHover {
+				opacity: 0.5;
+				/* filter: blur(40px);
+				z-index: 1; */
+				transition: 0.8s;
+				transition-delay: 0.2s;
+			}
+			.section .webBgSamcheop.webBgHover {
+				opacity: 0.5;
+				/* filter: blur(40px);
+				z-index: 1; */
+				transition: 0.8s;
+				transition-delay: 0.2s;
+			}
+			.section .webBgNike.webBgHover {
+				opacity: 0.5;
+				/* filter: blur(40px);
+				z-index: 1; */
+				transition: 0.8s;
+				transition-delay: 0.2s;
+			}
+
+			/* web portfolio 내용 */
+			.section .section_wrap {
+			}
+			.section .section_wrap .contents {
+				width: 100%;
+				max-width: 1280px;
+				margin: 0 auto;
+				position: relative;
+				z-index: 2;
+			}
+			.section .section_wrap .contents .text {
+				position: absolute;
+				top: 50%;
+				left: -16.2%;
+				transform: translateY(-50%);
+				z-index: 1;
+				text-align: left;
+				opacity: 1;
+			}
+			.section .section_wrap .contents .text .title {
+				font-size: 60px;
+				font-weight: 900;
+				line-height: 60px;
+				margin-bottom: 25px;
+				font-family: var(--font-family900);
+			}
+			.section .section_wrap .contents .text .name {
+				font-size: 40px;
+				font-weight: 900;
+				line-height: 50px;
+				margin-bottom: 15px;
+				font-family: var(--font-family900);
+			}
+			.section .section_wrap .contents .text .sub {
+				font-size: 20px;
+				font-weight: 400;
+				font-family: var(--font-family500);
+			}
+			.section .section_wrap .contents .logoBox {
+				width: 100%;
+				max-width: 960px;
+				height: 540px;
+				margin: 0 auto;
+				background: white;
+				box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+
+			.section .section_wrap .contents .logoBox .logoBox_wrap {
+			}
+			.section .section_wrap .contents .logoBox .logoBox_wrap img {
+				opacity: 1;
+			}
+
+			.section .section_wrap .contents .logoBox .line {
+				width: 100%;
+				position: absolute;
+				top: calc(100% + 40px);
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				font-family: var(--font-family500);
+				cursor: default;
+			}
+
+			.section .section_wrap .contents .logoBox .line p {
+				font-size: 20px;
+				font-weight: 400;
+			}
+			.section .section_wrap .contents .logoBox .line .p2 {
+				display: flex;
+				align-items: baseline;
+				font-size: 12px;
+				gap: 3px;
+			}
+			.section .section_wrap .contents .logoBox .line .p2 span {
+				font-size: 20px;
+				opacity: 1;
+			}
+			.section.active .section_wrap .contents .logoBox .line .p2 span {
+			}
+
+			.section .section_wrap .contents .logoBox .line > span {
+				display: block;
+				width: 75%;
+				height: 1px;
+				background-color: #111;
+				position: relative;
+			}
+			.section .section_wrap .contents .logoBox .line > span::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100%;
+				height: 1px;
+				background: #fbfbfd;
+				transition: 0.1s;
+				transition-delay: 0.5s;
+			}
+			.section.active .section_wrap .contents .logoBox .line > span::after {
+				transition: 0.8s;
+				transition-delay: 0.8s;
+				width: 0;
+			}
+
+			/* web modal */
+
+			.section .modal {
+				display: none;
+				position: fixed;
+				top: 60px;
+				left: 50%;
+				transform: translateX(-50%);
+				max-width: 1280px;
+				width: 80%;
+				background: #fff;
+				z-index: 9999;
+				font-family: 'Pretendard-Medium';
+				margin: 0 auto;
+				height: calc(100% - 60px);
+				box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+				border-radius: 25px 25px 0 0;
+				overflow: hidden;
+			}
+
+			.section .modal .modal_wrap::-webkit-scrollbar {
+				width: 10px;
+			}
+			.section .modal .modal_wrap::-webkit-scrollbar-thumb {
+				background-color: #2f3542;
+				border-radius: 25px;
+				background-clip: padding-box;
+				border: 2px solid transparent;
+			}
+			.section .modal .modal_wrap::-webkit-scrollbar-track {
+				background-color: grey;
+				border-radius: 10px;
+				box-shadow: inset 0px 0px 5px white;
+			}
+			.section .modal.view {
+				display: block;
+			}
+			.section .modal .modal_wrap {
+				text-align: left;
+				width: 100%;
+				position: relative;
+				overflow: auto;
+				margin-top: 25px;
+				height: calc(100% - 25px);
+				padding-bottom: 110px;
+			}
+			.section .modal .modal_wrap .modal_wrapper {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.section .modal .info {
+			}
+			.section .modal .title {
+				display: flex;
+				align-items: baseline;
+				justify-content: space-between;
+				border-bottom: 1px solid #111;
+				gap: 20px;
+			}
+			.section .modal .title .name {
+				font-size: 48px;
+				font-family: 'Pretendard-Bold';
+			}
+			.section .modal .info .title .date {
+				font-size: 16px;
+			}
+			.section .modal .info tr td {
+				padding: 10px 0px 10px 0;
+				font-size: 16px;
+			}
+			.section .modal .modal_wrap > div tr td:first-child {
+				width: 150px;
+			}
+			.section .modal table {
+				padding-top: 10px;
+			}
+			.section .modal .url td:first-child {
+				display: flex;
+				align-items: baseline;
+				gap: 3px;
+			}
+			.section .modal .info .url a:hover {
+				opacity: 0.6;
+			}
+			.section .modal .info .url .mb {
+				display: none;
+			}
+			.section .modal .typo {
+				margin-top: 50px;
+			}
+			.section .modal .typo .name {
+				font-size: 24px;
+				padding: 4px 0;
+			}
+			.section .modal .typo tr td {
+				font-family: 'Noto Sans KR';
+				padding: 10px 0px 10px 0;
+				font-size: 16px;
+			}
+
+			.section .modal .typo tr td:first-child {
+				font-family: 'Pretendard-Medium';
+			}
+			.section .modal .typo tr .size span:nth-child(1) {
+				font-size: 48px;
+			}
+			.section .modal .typo tr .size span:nth-child(3) {
+				font-size: 24px;
+			}
+			.section .modal .typo tr .size span:nth-child(5) {
+				font-size: 20px;
+			}
+			.section .modal .typo tr .size span:nth-child(7) {
+				font-size: 16px;
+			}
+			.section .modal .typo tr .size span:nth-child(9) {
+				font-size: 14px;
+			}
+			.section .modal .typo tr .size span:nth-child(11) {
+				font-size: 12px;
+			}
+			.section .modal .typo tr .weight span:nth-child(1) {
+				font-weight: 900;
+			}
+			.section .modal .typo tr .weight span:nth-child(3) {
+				font-weight: 700;
+			}
+			.section .modal .typo tr .weight span:nth-child(5) {
+				font-weight: 500;
+			}
+			.section .modal .typo tr .weight span:nth-child(7) {
+				font-weight: 400;
+			}
+			.section .modal .color {
+				margin-top: 50px;
+			}
+			.section .modal .color .title {
+			}
+			.section .modal .color .title .name {
+				font-size: 24px;
+				padding: 4px 0;
+			}
+			.section .modal .color table {
+			}
+			.section .modal .color table tr {
+			}
+			.section .modal .color table tr td {
+				padding: 10px 0px 10px 0;
+				font-size: 16px;
+			}
+
+			.section .modal .color table tr td .round {
+				display: inline-block;
+				margin-right: 10px;
+			}
+			.section .modal .color table tr td .round div {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				border: 1px solid #cecece;
+			}
+			.section .modal .color table tr td .round {
+				position: relative;
+			}
+			.section .modal .color table tr td .round p {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.section .modal .color table .bgColor td .round:first-child div {
+				background-color: #fff;
+			}
+			.section .modal .color table .bgColor td .round:nth-child(2) div {
+				background-color: #f5f5f5;
+			}
+			.section .modal .color table .fontColor td .round:first-child div {
+				background-color: #fff;
+			}
+			.section .modal .color table .fontColor td .round:nth-child(2) div {
+				background-color: #111;
+			}
+			.section .modal .color table .fontColor td .round:nth-child(3) div {
+				background-color: #757575;
+			}
+			.section .modal .color table .fontColor td .round:nth-child(4) div {
+				background-color: #707072;
+			}
+			.section .modal .color table .lineColor td .round:first-child div {
+				background-color: #dbdbdb;
+			}
+			.section .modal .color table .buttonColor td .round:first-child div {
+				background-color: #111;
+			}
+			.section .modal .color table .buttonColor td .round:nth-child(2) div {
+				background-color: #fff;
+			}
+			.section .modal .color table .buttonColor td .round:nth-child(3) div {
+				background-color: #dadada;
+			}
+
+			.section .modal .color table tr td .round p {
+				text-align: center;
+			}
+			.section .modal_bg {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background: #000c;
+				backdrop-filter: blur(4px);
+				-webkit-backdrop-filter: blur(4px);
+				z-index: 99;
+				transform: translateX(100%);
+				opacity: 0;
+				transition: opacity 0.3s 0s, transform 0s 0.3s;
+				cursor: pointer;
+			}
+			.section .modal_bg.view {
+				transform: translateX(0);
+				opacity: 1;
+				transition: opacity 0.3s 0s, transform 0s 0s;
+			}
+			.section .modalBtnBox {
+				position: fixed;
+				top: 15px;
+				right: 30px;
+				cursor: pointer;
+				z-index: 99;
+				width: 56px;
+				height: 56px;
+				box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+				border-radius: 50%;
+			}
+			.section .modalBtnBox:hover {
+			}
+			.section .modalBtnBox img {
+				width: 100%;
+			}
+
+			.section .modal .goBtn {
+				background: #0075ff;
+				width: 80%;
+				max-width: 950px;
+				height: 60px;
+				position: fixed;
+				bottom: 30px;
+				left: 50%;
+				transform: translateX(-50%);
+				font-size: 20px;
+				color: var(--color-font2);
+				font-family: 'Pretendard-Bold';
+				border-radius: 8px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				z-index: 99;
+				cursor: pointer;
+			}
+			.section .modal .goBtn:hover {
+				background: #0065d8;
+			}
+			#samcheop .typo .gm {
+				font-family: 'GmarketSans';
+			}
+			#samcheop .typo .nx {
+				font-family: 'NEXON Lv2 Gothic';
+				font-weight: 500;
+			}
+			#samcheop .typo tr .size .fs24 {
+				font-size: 24px;
+			}
+			#samcheop .typo tr .size .fs20 {
+				font-size: 20px;
+			}
+			#samcheop .typo tr .size .fs16 {
+				font-size: 16px;
+			}
+			#samcheop .typo tr .size .fs14 {
+				font-size: 14px;
+			}
+			#samcheop .typo tr .size .fs12 {
+				font-size: 12px;
+			}
+			#samcheop .typo tr .weight .bold {
+				font-weight: bold;
+			}
+			#samcheop .typo tr .weight .medium {
+				font-weight: 500;
+			}
+			#samcheop .color .bgColor td .round:first-child div {
+				background-color: #fff;
+			}
+			#samcheop .color .bgColor td .round:nth-child(2) div {
+				background-color: #f6f3ea;
+			}
+			#samcheop .color .bgColor td .round:nth-child(3) div {
+				background-color: #e04b32;
+			}
+			#samcheop .color .fontColor td .round:first-child div {
+				background-color: #000000;
+			}
+			#samcheop .color .fontColor td .round:nth-child(2) div {
+				background-color: #989898;
+			}
+			#samcheop .color .fontColor td .round:nth-child(3) div {
+				background-color: #f0a500;
+			}
+			#samcheop .color .fontColor td .round:nth-child(4) div {
+				background-color: #542623;
+			}
+			#samcheop .color .fontColor td .round:nth-child(5) div {
+				background-color: #e04b32;
+			}
+			#samcheop .color .lineColor td .round:first-child div {
+				background-color: #e5e5e5;
+			}
+			#samcheop .color .lineColor td .round:nth-child(2) div {
+				background-color: #d1d1d1;
+			}
+			#samcheop .color .lineColor td .round:nth-child(3) div {
+				background-color: #e04b32;
+			}
+			#samcheop .color .buttonColor td .round:first-child div {
+				background-color: #e04b32;
+			}
+			#samcheop .color .buttonColor td .round:nth-child(2) div {
+				background-color: #ffffff;
+			}
+			#samcheop .color .buttonColor td .round:nth-child(3) div {
+				background-color: #f0a500;
+			}
+			#samcheop .color .buttonColor td .round:nth-child(4) div {
+				background-color: #f4b01b;
+			}
+			#samcheop .color .buttonColor td .round:nth-child(5) div {
+				background-color: #fdf9ee;
+			}
+
+			#dasoni .typo tr td:last-child {
+				font-family: 'NanumSquare';
+			}
+			#dasoni .typo .size span:nth-child(1) {
+				font-size: 48px;
+			}
+			#dasoni .typo .size span:nth-child(3) {
+				font-size: 20px;
+			}
+			#dasoni .typo .size span:nth-child(5) {
+				font-size: 16px;
+			}
+			#dasoni .typo .size span:nth-child(7) {
+				font-size: 14px;
+			}
+			#dasoni .typo .size span:nth-child(9) {
+				font-size: 12px;
+			}
+			#dasoni .typo .weight span:nth-child(1) {
+				font-weight: 800;
+			}
+			#dasoni .typo .weight span:nth-child(3) {
+				font-weight: 700;
+			}
+			#dasoni .typo .weight span:nth-child(5) {
+				font-weight: 400;
+			}
+			#dasoni .color .bgColor td .round:first-child div {
+				background-color: #fff;
+			}
+			#dasoni .color .bgColor td .round:nth-child(2) div {
+				background-color: #f9f9f9;
+			}
+			#dasoni .color .bgColor td .round:nth-child(3) div {
+				background-color: #222222;
+			}
+			#dasoni .color .fontColor td .round:first-child div {
+				background-color: #000000;
+			}
+			#dasoni .color .fontColor td .round:nth-child(2) div {
+				background-color: #ffffff;
+			}
+			#dasoni .color .fontColor td .round:nth-child(3) div {
+				background-color: #ff8f2b;
+			}
+			#dasoni .color .fontColor td .round:nth-child(4) div {
+				background-color: #65b07e;
+			}
+			#dasoni .color .fontColor td .round:nth-child(5) div {
+				background-color: #4f3a53;
+			}
+			#dasoni .color .lineColor td .round:first-child div {
+				background-color: #000000;
+			}
+			#dasoni .color .buttonColor td .round:first-child div {
+				background-color: #000000;
+			}
+			#dasoni .color .buttonColor td .round:nth-child(2) div {
+				background-color: #ff8f2b;
+			}
+			#dasoni .color .buttonColor td .round:nth-child(3) div {
+				background-color: #65b07e;
+			}
+			#dasoni .color .buttonColor td .round:nth-child(4) div {
+				background-color: #4f3a53;
+			}
+
+			#halo .typo tr td:last-child {
+				font-family: 'Pretendard-Medium';
+			}
+			#halo .typo .size span:nth-child(1) {
+				font-size: 42px;
+			}
+			#halo .typo .size span:nth-child(3) {
+				font-size: 24px;
+			}
+			#halo .typo .size span:nth-child(5) {
+				font-size: 16px;
+			}
+			#halo .typo .size span:nth-child(7) {
+				font-size: 14px;
+			}
+			#halo .typo .size span:nth-child(9) {
+				font-size: 12px;
+			}
+			#halo .typo .weight span:nth-child(1) {
+				font-weight: 700;
+			}
+			#halo .typo .weight span:nth-child(3) {
+				font-weight: 500;
+			}
+			#halo .typo .weight span:nth-child(5) {
+				font-weight: 400;
+			}
+			#halo .typo .weight span:nth-child(7) {
+				font-weight: 300;
+			}
+			#halo .color .bgColor td .round:first-child div {
+				background-color: #fff;
+			}
+			#halo .color .fontColor td .round:first-child div {
+				background-color: #000000;
+			}
+			#halo .color .fontColor td .round:nth-child(2) div {
+				background-color: #111111;
+			}
+			#halo .color .fontColor td .round:nth-child(3) div {
+				background-color: #505050;
+			}
+			#halo .color .fontColor td .round:nth-child(4) div {
+				background-color: #d1d1d1;
+			}
+			#halo .color .fontColor td .round:nth-child(5) div {
+				background-color: #ffffff;
+			}
+			#halo .color .lineColor td .round:first-child div {
+				background-color: #ededed;
+			}
+			#halo .color .buttonColor td .round:first-child div {
+				background-color: #111111;
+			}
+			#halo .color .buttonColor td .round:nth-child(2) div {
+				background-color: #ffffff;
+			}
+			#halo .color .buttonColor td .round:nth-child(3) div {
+				background-color: #e5e5e5;
+			}
+			.figma {
+				margin-top: 50px;
+			}
+			.figma .img {
+				border: 1px solid rgba(0, 0, 0, 0.4);
+				margin-top: 10px;
+			}
+			.figma .text {
+				margin-top: 10px;
+				font-family: var(--font-family400);
+			}
+			.figma .text span {
+				font-family: var(--font-family700);
+			}
+			.figma .img img {
+				width: 100%;
+			}
+			.colorWhite {
+				color: white;
+			}
+
+			/* design */
+			.design {
+				padding: 0 0 0 4%;
+				font-family: 'Pretendard-Medium';
+				background: #111;
+				color: var(--color-font2);
+			}
+
+			.design .design_wrap {
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+				align-items: center;
+			}
+			.design .design_wrap .xbtn {
+				position: absolute;
+				top: 0;
+				right: 5%;
+				cursor: pointer;
+				display: none;
+				border-radius: 50%;
+			}
+			.design .design_wrap .title {
+				font-size: 8.85vw;
+				font-weight: 700;
+				transition: 0.3s;
+			}
+			.design .design_wrap .box {
+				width: 100%;
+				height: 720px;
+				font-family: 'Pretendard-Medium';
+			}
+			.design .design_wrap .box li {
+				position: absolute;
+				top: 50%;
+				left: 70%;
+				transform: translate(-50%, -50%);
+				border-radius: 50%;
+				cursor: pointer;
+				z-index: 2;
+				width: 300px;
+				height: 300px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #fff;
+			}
+			.design .design_wrap .box li:last-child {
+				background: #111;
+				padding-left: 5px;
+				border: 1px solid #fbfbfd;
+			}
+			.design .design_wrap .box li::after {
+				content: '';
+				position: absolute;
+				z-index: 3;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border-radius: 50%;
+				background: #111;
+				opacity: 0;
+				transition: 0.3s;
+			}
+			.design .design_wrap .box li .texthv {
+				position: absolute;
+				z-index: 4;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				opacity: 0;
+			}
+			.design .design_wrap .box li .texthv h2 {
+				font-size: 28px;
+			}
+			.design .design_wrap .box li .texthv img {
+				width: 100%;
+			}
+			.design .design_wrap .box li .texthv .img_wrap {
+				display: inline-block;
+				position: relative;
+				width: 38px;
+				padding: 2px;
+				height: 38px;
+			}
+			.design .design_wrap .box li .texthv .img_wrap::after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				position: absolute;
+				background: rgba(255, 255, 255, 0.3);
+				border-radius: 50%;
+				z-index: -1;
+			}
+			.design .design_wrap .box li:hover > img {
+				transform: scale(1.2);
+				transition: 0.3s;
+			}
+			.design .design_wrap .box li:hover .texthv {
+				opacity: 1;
+				transition: 0.3s;
+			}
+			.design .design_wrap .box li:hover::after {
+				opacity: 0.7;
+				transition: 0.2s;
+			}
+
+			.design .design_wrap .box li img {
+				transition: 0.3s;
+			}
+			.design .design_wrap .box li.card {
+			}
+			.design.active2 .design_wrap .box li.card {
+				top: 25%;
+				left: 70%;
+				transition: 0.5s;
+				transition-delay: 0.1s;
+			}
+			.design .design_wrap .box li.ediya {
+			}
+			.design.active2 .design_wrap .box li.ediya {
+				left: 60%;
+				top: 85%;
+				transition: 0.5s;
+				transition-delay: 0.1s;
+			}
+			.design .design_wrap .box li.sonwrock {
+			}
+			.design.active2 .design_wrap .box li.sonwrock {
+				top: 70%;
+				left: 80%;
+				transition: 0.5s;
+				transition-delay: 0.1s;
+			}
+
+			.design .design_wrap.click1 .box li.card {
+				transform: translateY(-50%);
+				top: 50%;
+				left: 30%;
+				opacity: 0;
+				cursor: unset;
+			}
+			.design .design_wrap.click1 .box li.ediya {
+				top: 5%;
+				transform: translatex(-50%);
+				left: 80%;
+			}
+			.design .design_wrap.click1 .box li.sonwrock {
+				top: 80%;
+				left: 80%;
+			}
+			.design .design_wrap.click2 .box li.card {
+				top: 80%;
+				left: 80%;
+			}
+			.design .design_wrap.click2 .box li.ediya {
+				top: 50%;
+				left: 30%;
+				transform: translateY(-50%);
+				opacity: 0;
+				cursor: unset;
+			}
+			.design .design_wrap.click2 .box li.sonwrock {
+				top: 5%;
+				transform: translatex(-50%);
+				left: 80%;
+			}
+			.design .design_wrap.click3 .box li.card {
+				top: 5%;
+				transform: translatex(-50%);
+				left: 80%;
+			}
+			.design .design_wrap.click3 .box li.ediya {
+				top: 80%;
+				left: 80%;
+			}
+			.design .design_wrap.click3 .box li.sonwrock {
+				top: 50%;
+				left: 30%;
+				transform: translateY(-50%);
+				opacity: 0;
+				cursor: unset;
+			}
+
+			.design .design_wrap .img {
+			}
+
+			.design .design_wrap .img li {
+				position: absolute;
+				top: 52%;
+				left: 33%;
+				transform: translate(-50%, -50%);
+				opacity: 0;
+				transition: 0.5s;
+				transition-delay: 0.5s;
+				z-index: 0;
+			}
+			.design .design_wrap .img li img {
+				width: 100%;
+			}
+			.design .designModal_bg {
+				display: none;
+			}
+			.design .designModal {
+				display: none;
+			}
+			/* contact */
+			.contact {
+			}
+			.contact .contact_wrap {
+				text-align: left;
+			}
+			.contact .contact_wrap .text {
+				display: flex;
+				justify-content: center;
+			}
+			.contact .contact_wrap .title {
+				font-size: 1vw;
+				font-family: var(--font-family400);
+				position: relative;
+			}
+			.contact .contact_wrap .title::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: #fbfbfd;
+			}
+			.contact.active .contact_wrap .title::after {
+				animation: typing 1.2s 1s steps(14) forwards;
+			}
+			@keyframes typing {
+				0% {
+					border-left: 1px solid #111;
+				}
+				89% {
+					border-left: 1px solid #111;
+				}
+				80% {
+					left: 100%;
+				}
+				100% {
+					left: 100%;
+					border: none;
+				}
+			}
+			.contact .contact_wrap .text button {
+				background: none;
+				border: none;
+				cursor: pointer;
+				display: flex;
+				flex-direction: column;
+			}
+			.contact .contact_wrap .text button #text {
+				font-family: var(--font-family500);
+				color: var(--color-font1);
+				font-size: 3vw;
+				text-decoration: underline;
+				text-underline-position: under;
+				text-underline-offset: 0;
+				opacity: 0;
+			}
+
+			.contact.active .contact_wrap .text button #text {
+				opacity: 1;
+				transition: 0.6s;
+				transition-delay: 2.3s;
+			}
+			/* 반응형 */
+			.profileMB {
+				display: none;
+			}
+			.linkBtnMB {
+				display: none;
+			}
+			.mb {
+				display: none;
+			}
+			.design_wrap.mb {
+				display: none;
+			}
+			.topMenuMBBtn {
+				display: none;
+			}
+			.topMenuMB {
+				display: none;
+			}
+			@media only screen and (min-width: 100px) and (max-width: 1024px) {
+				body {
+					overflow: visible !important;
+					overflow-x: hidden !important;
+				}
+
+				.section .webBg {
+					display: none;
+				}
+				/* modal 반응형 */
+				.section .modal {
+					width: 100%;
+					height: calc(100% - 60px);
+				}
+				.section .modal .modal_wrap {
+					padding: 20px 5% 110px;
+				}
+				.section .modal .modal_wrap > div tr td:first-child {
+				}
+				.section .modal table tr {
+					display: flex;
+					flex-flow: column nowrap;
+				}
+				.section .modal table tr:first-child td {
+					padding-top: 10px;
+				}
+				.section .modal table tr td:first-child {
+					font-size: 18px;
+				}
+				.section .modal table tr td:last-child {
+					font-size: 14px;
+				}
+				.section .modal .title {
+					gap: 0px;
+				}
+				.section .modal .title .name {
+					font-size: 24px;
+				}
+				.section .modal .info .title .date {
+					font-size: 13px;
+				}
+				.section .modalBtnBox {
+					width: 36px;
+					height: 36px;
+					right: 15px;
+				}
+				.section .modal .color table tr td .round {
+					margin: 5px 10px 5px 0;
+				}
+				/* header */
+				header {
+					animation: none;
+					opacity: 1;
+					border: none;
+					z-index: 9999;
+				}
+				header .header_wrap {
+				}
+				header .header_wrap #myMenu {
+					display: none;
+				}
+				.rightButton {
+					animation: none;
+					opacity: 1;
+					width: 100%;
+					max-width: 680px;
+					padding: 0 100px;
+					top: 0;
+					left: 50%;
+					right: unset;
+					transform: translateX(-50%);
+					writing-mode: unset;
+					text-orientation: unset;
+					height: 40px;
+					z-index: 99999;
+				}
+				.rightButton_wrap {
+					height: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					position: relative;
+				}
+				.rightButton .rightButton_wrap > a {
+					padding: unset;
+					margin-top: 3px;
+				}
+				.rightButton .topMenuMBBtn {
+					height: 100%;
+					display: flex;
+					align-items: center;
+				}
+				.rightButton .topMenuMBBtn > div {
+					width: 30px;
+					height: 12px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: space-between;
+					position: relative;
+				}
+				.rightButton .topMenuMBBtn > div span {
+					display: inline-block;
+					width: 20px;
+					height: 2px;
+					background: #fff;
+				}
+				.rightButton .topMenuMBBtn.view > div span:nth-child(1) {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+				.rightButton .topMenuMBBtn.view > div span:nth-child(2) {
+					display: none;
+				}
+				.rightButton .topMenuMBBtn.view > div span:nth-child(3) {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%) rotate(135deg);
+				}
+
+				.topMenuMB_wrap {
+					width: 100%;
+
+					background: #111;
+					opacity: 0.9;
+
+					position: fixed;
+					top: 0;
+					left: 50%;
+					z-index: 9999;
+					transform: translateX(-50%);
+					margin-left: -1px;
+				}
+				.topMenuMB {
+					width: 100%;
+					max-width: 680px;
+					margin: 0 auto;
+					max-height: 0;
+					overflow: hidden;
+					height: 100vh;
+
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+
+					font-family: var(--font-family400);
+					color: var(--color-font2);
+
+					text-align: left;
+				}
+
+				.topMenuMB.view {
+					max-height: 100%;
+					padding: 40px 100px 20px;
+				}
+				.topMenuMB li {
+					font-size: 8.5vw;
+					font-weight: 700;
+					font-family: var(--font-family900);
+					line-height: 1;
+				}
+				.topMenuMB li:first-child {
+					color: var(--color-font3);
+				}
+				.topMenuMB li a {
+					line-height: 1;
+				}
+				/* main */
+				.main .anima {
+					animation: none;
+					display: none;
+				}
+				.main .animaBar {
+					animation: none;
+					display: none;
+				}
+
+				.main .main_wrap {
+					width: 100%;
+					margin: 0 auto;
+					max-width: 680px;
+					color: var(--color-font2);
+					padding: 0 100px;
+				}
+				.main .main_wrap .contents {
+					display: flex;
+					justify-content: space-between;
+					align-items: flex-start;
+					flex-direction: column;
+					gap: 3vw;
+				}
+				.main .main_wrap .mainMenu {
+					display: inline-flex;
+					flex-direction: column;
+					align-items: flex-start;
+					animation: none;
+					text-align: left;
+					opacity: 1;
+					width: 100%;
+					gap: 0px;
+				}
+				.main .main_wrap .mainMenu li {
+					width: 100%;
+					margin: unset;
+					position: relative;
+				}
+				.main .main_wrap .mainMenu li::before {
+					display: none;
+				}
+				.main .main_wrap .mainMenu li a {
+					font-size: 8.5vw;
+					font-weight: 700;
+					line-height: 1;
+					mix-blend-mode: difference;
+				}
+				.mbLine {
+					height: 1px;
+					width: 100%;
+					background: rgba(255, 255, 255, 0.3);
+				}
+				.mbLine2 {
+					height: 1px;
+					width: calc(100% - 40px);
+					margin-left: 20px;
+					background: rgba(0, 0, 0, 0.1);
+				}
+				.main .main_wrap .text {
+					animation: none;
+					text-align: left;
+					opacity: 1;
+					width: 100%;
+					align-items: unset;
+				}
+				.main .main_wrap .text .name {
+					display: flex;
+					align-items: baseline;
+					gap: 20px;
+					font-size: 2.6vw;
+					position: relative;
+				}
+				.main .main_wrap .text .name span {
+					font-size: 2.6vw;
+				}
+				.main .main_wrap .text .sub {
+					font-size: 1.55vw;
+					text-align: left;
+					color: #fff;
+					margin-top: 15px;
+				}
+				.mb_br {
+					display: none;
+				}
+				/* about */
+
+				.about .about_wrap {
+					width: 100%;
+					max-width: 680px;
+					margin: 0 auto;
+					padding: 0 100px;
+				}
+				.about .about_wrap .contents {
+					display: flex;
+					flex-direction: column-reverse;
+					justify-content: flex-end;
+
+					aspect-ratio: 3/4;
+					border-radius: 20px;
+					box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+				}
+				.about .about_wrap .contents .text {
+					position: unset;
+					top: unset;
+					left: unset;
+					transform: unset;
+					z-index: 2;
+					padding: 20px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					height: 50%;
+				}
+				.about .about_wrap .contents .text .text_wrap {
+					display: flex;
+					flex-direction: column;
+					gap: 1vw;
+				}
+				.about .about_wrap .contents .text .title {
+					font-size: 4.8vw;
+					line-height: 5vw;
+					margin-bottom: unset;
+				}
+				.about .about_wrap .contents .text .name {
+					font-size: 2.8vw;
+					margin-bottom: unset;
+					line-height: 1;
+				}
+				.about .about_wrap .contents .text .sub {
+					font-size: 1.4vw;
+				}
+				.about .about_wrap .contents .aboutlogoBox {
+					height: 50%;
+				}
+				.about .about_wrap .contents .aboutlogoBox .logoBox_wrap {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					overflow: hidden;
+					border-radius: 20px 20px 0 0;
+				}
+				.about .about_wrap .contents .aboutlogoBox img {
+					cursor: default;
+					width: unset;
+					height: 100%;
+					position: relative;
+				}
+				.about .logoBoxHover {
+					display: none;
+				}
+				.about .logoBoxHover.hover {
+					display: none;
+				}
+				.about .aboutBtnMb {
+					font-family: 'Pretendard-Medium';
+					border-radius: 50px;
+					width: 97px;
+					height: 36px;
+					background: #111;
+					cursor: pointer;
+					color: #fff;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 5px;
+					/* padding-top: 1px; */
+				}
+				.about .aboutBtnMb img {
+					mix-blend-mode: difference;
+				}
+				.about .about_wrap .contents .line {
+					top: unset;
+					left: 50%;
+					bottom: -8%;
+				}
+				.about .about_wrap .contents .line p {
+					font-size: 14px;
+				}
+				.about .about_wrap .contents .line > span {
+					width: 75%;
+				}
+				/* about skills */
+				.about .about_wrap .contents2 {
+					display: flex;
+					flex-direction: column-reverse;
+					justify-content: flex-end;
+
+					aspect-ratio: 3/4;
+					border-radius: 20px;
+					overflow: hidden;
+					box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+				}
+				.about .about_wrap .contents2 .text {
+					position: unset;
+					top: unset;
+					left: unset;
+					transform: unset;
+					padding: 20px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					height: 50%;
+				}
+				.about .about_wrap .contents2 .text .text_wrap {
+					display: flex;
+					flex-direction: column;
+					gap: 1vw;
+				}
+				.about .about_wrap .contents2 .text .title {
+					font-size: 4.8vw;
+					line-height: 5vw;
+					margin-bottom: unset;
+				}
+				.about .about_wrap .contents2 .text .name {
+					font-size: 2.8vw;
+					margin-bottom: unset;
+					line-height: 1;
+				}
+				.about .about_wrap .contents2 .text .sub {
+					font-size: 1.4vw;
+				}
+				.about .about_wrap .contents2 .aboutlogoBox {
+					height: 50%;
+					border: none;
+				}
+				.about .about_wrap .contents2 .aboutlogoBox .logoBox_wrap {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: space-around;
+					align-items: center;
+					flex-direction: column;
+				}
+				.about .about_wrap .contents2 .aboutlogoBox img {
+					cursor: default;
+					width: 100%;
+					/* height: 100%; */
+					position: relative;
+				}
+				.about .about_wrap .contents2 .line {
+					top: unset;
+					left: 50%;
+					bottom: -8%;
+				}
+				.about .about_wrap .contents2 .line p {
+					font-size: 14px;
+				}
+				.about .about_wrap .contents2 .line > span {
+					width: 75%;
+				}
+				.about .about_wrap .contents2 .aboutlogoBox::after {
+					display: none;
+				}
+				.about .about_wrap .contents2 .aboutlogoBox .logoBox_wrap .slider1 {
+					width: 100%;
+					margin-top: unset;
+					overflow: hidden;
+				}
+				.about .about_wrap .contents2 .aboutlogoBox .logoBox_wrap .slider2 {
+					width: 100%;
+					margin-top: unset;
+					overflow: hidden;
+				}
+				.about .about_wrap .contents2 .aboutBtn2 {
+					font-family: 'Pretendard-Medium';
+					border-radius: 50px;
+					width: 97px;
+					height: 36px;
+					background: #111;
+					cursor: pointer;
+					color: #fff;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 5px;
+				}
+				.about .about_wrap .contents2 .aboutBtn2 img {
+					width: unset;
+					mix-blend-mode: difference;
+				}
+				.about .about_wrap .contents2 .aboutlogoBox .aboutBtn2pc {
+					display: none;
+				}
+				/* web portfolio */
+				.linkBtnMB {
+					font-family: 'Pretendard-Medium';
+					border-radius: 50px;
+					width: 97px;
+					height: 36px;
+					background: #111;
+					cursor: pointer;
+					color: #fff;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 5px;
+				}
+				.section .section_wrap {
+					height: 100%;
+					max-width: 680px;
+					margin: 0 auto;
+					display: flex;
+					align-items: center;
+					padding: 0 100px;
+				}
+				.section .section_wrap .contents {
+					width: 100%;
+
+					aspect-ratio: 3/4;
+				}
+				.section .section_wrap .contents .logoBox {
+					height: 100%;
+					flex-direction: column-reverse;
+					align-items: unset;
+					border-radius: 20px;
+					cursor: default;
+				}
+				.section .section_wrap .contents .text {
+					position: unset;
+					top: unset;
+					left: unset;
+					transform: unset;
+					height: 60%;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					padding: 20px;
+				}
+				.section .section_wrap .contents .text .text_wrap {
+					display: flex;
+					flex-direction: column;
+					gap: 3vw;
+				}
+				.section .section_wrap .contents .logoBox .logoBox_wrap {
+					height: 40%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 20px;
+				}
+				.section .section_wrap .contents .logoBox .logoBox_wrap img {
+					width: 100%;
+					max-width: 255px;
+				}
+				.section#samcheop .section_wrap .contents .logoBox .logoBox_wrap img {
+					max-width: 120px;
+				}
+				.section .section_wrap .contents .text .title {
+					font-size: 4.8vw;
+					line-height: 5vw;
+					margin-bottom: unset;
+				}
+				.section .section_wrap .contents .text .name {
+					font-size: 2.8vw;
+					line-height: 1;
+					margin-bottom: unset;
+				}
+				.section .section_wrap .contents .text .sub {
+					font-size: 1.4vw;
+				}
+				.section .section_wrap .contents .logoBox .line {
+					top: unset;
+					bottom: -8%;
+				}
+
+				.section .section_wrap .contents .logoBox .line p {
+					font-size: 14px;
+				}
+				.section .section_wrap .contents .logoBox .line .p2 {
+				}
+				.section .section_wrap .contents .logoBox .line .p2 span {
+					font-size: 16px;
+					opacity: 1;
+				}
+				.section .section_wrap .contents .logoBox .line > span {
+					width: 60%;
+				}
+				.section .modal .goBtn {
+					width: 92%;
+				}
+				/* design */
+				.design {
+					padding: 0 0 0 0%;
+				}
+				.design .design_wrap.pc {
+					display: none;
+				}
+				.design .design_wrap.mb {
+					width: 100%;
+					margin: 0 auto;
+					max-width: 680px;
+
+					padding: 0 100px;
+					display: block;
+				}
+				.design .design_wrap.mb .contents {
+					width: 100%;
+					aspect-ratio: 3/4;
+
+					overflow: hidden;
+				}
+				.design .design_wrap.mb .contents .title {
+					color: var(--color-font1);
+				}
+				.design .design_wrap.mb .contents .sliderDesign_mb {
+					height: 100%;
+				}
+				.design .design_wrap.mb .contents .sliderDesign_mb .swiper-slide {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					gap: 3vw;
+					flex-direction: column;
+					border-radius: 20px;
+					background: var(--color-bg);
+				}
+				.design .design_wrap.mb .contents .slider_logo_box {
+					border-radius: 50%;
+					cursor: pointer;
+					z-index: 2;
+					width: 30vw;
+					height: 30vw;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background: var(--color-bg);
+				}
+				.design .design_wrap.mb .contents .sliderDesign_mb .swiper-slide p {
+					font-size: 16px;
+					color: var(--color-font1);
+					font-family: var(--font-family700);
+				}
+				.design .design_wrap.mb .contents .sliderDesign_mb .swiper-slide p span {
+					font-size: 12px;
+					opacity: 0.8;
+				}
+				.design .design_wrap.mb .contents .swiper-slide:nth-child(4) .slider_logo_box {
+					background: #111;
+					border: 1px solid #fbfbfd;
+				}
+				.design .design_wrap.mb .contents .slider_logo_box img {
+					width: 50%;
+				}
+				/* design 모달 */
+				.design .designModal_bg {
+					width: 100%;
+					height: 100%;
+					position: fixed;
+					top: 0;
+					left: 0;
+					background: #000c;
+					backdrop-filter: blur(4px);
+					-webkit-backdrop-filter: blur(4px);
+					z-index: 1001;
+					transform: translateX(100%);
+					opacity: 0;
+					transition: opacity 0.3s 0s, transform 0s 0.3s;
+					cursor: pointer;
+				}
+				.design .designModal_bg.view {
+					transform: translateX(0);
+					opacity: 1;
+					transition: opacity 0.3s 0s, transform 0s 0s;
+					display: block;
+				}
+				.designModalX {
+					position: fixed;
+					width: 36px;
+					height: 36px;
+					top: 102%;
+					left: 50%;
+					transform: translateX(-50%);
+					z-index: 9999;
+				}
+				.designModalX img {
+					width: 100%;
+				}
+				.design .designModal {
+					display: none;
+					position: fixed;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 100%;
+					z-index: 9999;
+					box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+					/* overflow: hidden; */
+				}
+				.design .designModal .designModal_wrap {
+					/* padding: 0 5%; */
+				}
+				.design .designModal2 .designModal_wrapper {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.design .designModal.view {
+					display: block;
+				}
+				.design .designModal .designModal_wrap .designModal_wrapper .slider img {
+					width: 100%;
+					max-height: 500px;
+				}
+				.design .designModal .designModal_wrap .designModal_wrapper .slider {
+					height: 100%;
+				}
+				.design .designModal .designModal_wrap .designModal_wrapper .slider .swiper-slide {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.design .designModal2 .designModal_wrap .designModal_wrapper > img {
+					width: 50%;
+				}
+				/* contact */
+				.contact .contact_wrap {
+				}
+				.contact .contact_wrap .text {
+				}
+				.contact .contact_wrap .text .title {
+					font-size: 2.5vw;
+				}
+				.contact .contact_wrap .text button #text {
+					font-size: 4vw;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 850px) {
+				.main .main_wrap .mainMenu li a {
+					font-size: 90px;
+				}
+				.topMenuMB li {
+					font-size: 90px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 650px) {
+				.main .main_wrap .mainMenu li a {
+					font-size: 75px;
+				}
+				.contact .contact_wrap .text .title {
+					font-size: 3.5vw;
+				}
+				.contact .contact_wrap .text button #text {
+					font-size: 5vw;
+				}
+				.topMenuMB li {
+					font-size: 75px;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 530px) {
+				.pc {
+					display: none;
+				}
+				.mb {
+					display: block !important;
+				}
+				.about .about_wrap .contents2 .aboutBtn2.mb {
+					display: flex !important;
+				}
+				.url .mb {
+					font-size: 20px !important;
+				}
+				.rightButton {
+					padding: 0 30px;
+				}
+				.topMenuMB li {
+					font-size: 17vw;
+				}
+				.topMenuMB.view {
+					max-height: 100%;
+					padding: 40px 30px 20px;
+				}
+				.main .main_wrap {
+					width: 100%;
+					margin: 0 auto;
+					padding: 0 30px;
+				}
+				.main .main_wrap .mainMenu {
+					gap: 0px;
+				}
+				.main .main_wrap .mainMenu li a {
+					font-size: 18vw;
+				}
+				.main .main_wrap .text .name {
+					font-size: 5vw;
+				}
+				.main .main_wrap .text .name span {
+					font-size: 5.5vw;
+				}
+				.main .main_wrap .text .sub {
+					font-size: 3.5vw;
+				}
+				/* about */
+
+				.about .about_wrap {
+					padding: 0 30px;
+				}
+				.about .about_wrap .contents .text {
+				}
+				.about .about_wrap .contents .text .title {
+					font-size: 10vw;
+					line-height: 10vw;
+				}
+				.about .about_wrap .contents .text .name {
+					font-size: 5vw;
+				}
+				.about .about_wrap .contents .text .sub {
+					font-size: 3vw;
+				}
+				.profilePC {
+					display: none;
+				}
+				.profileMB {
+					display: block;
+				}
+				.about .about_wrap .contents .line > span {
+					width: 70%;
+				}
+				.about .about_wrap .contents2 .text {
+					justify-content: space-between;
+					gap: 1vw;
+					height: 50%;
+				}
+				.about .about_wrap .contents2 .text .title {
+					font-size: 10vw;
+					line-height: 10vw;
+				}
+				.about .about_wrap .contents2 .text .name {
+					font-size: 5vw;
+				}
+				.about .about_wrap .contents2 .text .sub {
+					font-size: 3vw;
+				}
+				.about .about_wrap .contents2 .line > span {
+					width: 70%;
+				}
+				/* web portfolio */
+				.section .section_wrap {
+					padding: 0 30px;
+				}
+				.section .section_wrap .contents {
+				}
+				.section .section_wrap .contents .text {
+				}
+				.section .section_wrap .contents .text .title {
+					font-size: 10vw;
+					line-height: 10vw;
+				}
+				.section .section_wrap .contents .text .name {
+					font-size: 5vw;
+					line-height: 5vw;
+				}
+				.section .section_wrap .contents .text .sub {
+					font-size: 3vw;
+				}
+				.section .section_wrap .contents .line > span {
+					width: 55% !important;
+				}
+				.section .section_wrap .contents .logoBox .logoBox_wrap img {
+					max-width: 200px;
+				}
+				/* design */
+				.design {
+					position: relative;
+				}
+				.design .design_wrap.mb {
+					padding: 0 30px;
+				}
+				.design .design_wrap .title {
+					font-size: 15vw;
+				}
+				.design .design_wrap.mb .contents .slider_logo_box {
+					width: 40vw;
+					height: 40vw;
+				}
+				/* design modal */
+				.design .designModal .designModal_wrap .designModal_wrapper img {
+					width: 100%;
+				}
+
+				.contact .contact_wrap {
+					padding: 0 30px;
+				}
+				.contact .contact_wrap .text .title {
+					font-size: 4vw;
+				}
+				.contact .contact_wrap .text button #text {
+					font-size: 7vw;
+				}
+			}
+			@media only screen and (min-width: 100px) and (max-width: 390px) {
+				.about .about_wrap .contents .text {
+					gap: 10px;
+					height: 47%;
+					justify-content: center;
+				}
+				.about .about_wrap .contents .text .title {
+					font-size: 8vw;
+					line-height: 8vw;
+				}
+				.about .about_wrap .contents .text .name {
+					font-size: 4vw;
+					line-height: 4vw;
+				}
+				.about .about_wrap .contents .text .sub {
+					font-size: 2.5vw;
+				}
+				.about .about_wrap .contents2 .text {
+					justify-content: flex-start;
+					gap: 10px;
+					height: 47%;
+				}
+				.about .about_wrap .contents2 .text .title {
+					font-size: 8vw;
+					line-height: 8vw;
+				}
+				.about .about_wrap .contents2 .text .name {
+					font-size: 4vw;
+					line-height: 4vw;
+				}
+				.about .about_wrap .contents2 .text .sub {
+					font-size: 2.5vw;
+				}
+				.section .section_wrap .contents .text .title {
+					font-size: 8vw;
+					line-height: 8vw;
+				}
+				.section .section_wrap .contents .text .name {
+					font-size: 4vw;
+					line-height: 4vw;
+				}
+				.section .section_wrap .contents .text .sub {
+					font-size: 2.5vw;
+				}
+				.section .section_wrap .contents .line > span {
+					/* width: 45%; */
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="header_wrap">
+				<ul id="myMenu">
+					<li data-menuanchor="firstPage">
+						<a href="#firstPage">Main</a>
+					</li>
+					<li data-menuanchor="secondPage">
+						<a href="#secondPage">About</a>
+					</li>
+					<li data-menuanchor="thirdPage">
+						<a href="#thirdPage">Web</a>
+					</li>
+					<li data-menuanchor="seventhPage">
+						<a href="#seventhPage">Design</a>
+					</li>
+					<li data-menuanchor="eighthPage">
+						<a href="#eighthPage">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<h1 class="rightButton">
+			<div class="rightButton_wrap">
+				<a href="#firstPage">
+					<span>2</span><span>0</span><span>2</span><span class="span">4</span><span></span> <span>J</span
+					><span>D</span><span class="span">M</span><span></span> <span>P</span><span>O</span><span>R</span
+					><span>T</span><span>F</span><span>O</span><span>L</span><span>I</span><span>O</span>
+				</a>
+				<div class="topMenuMBBtn">
+					<div>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</h1>
+		<div class="topMenuMB_wrap">
+			<ul class="topMenuMB">
+				<li data-menuanchor="firstPage">
+					<a href="#firstPage">MAIN</a>
+				</li>
+				<li data-menuanchor="secondPage">
+					<a href="#secondPage">ABOUT</a>
+				</li>
+				<li data-menuanchor="thirdPage">
+					<a href="#thirdPage">WEB</a>
+				</li>
+				<li data-menuanchor="seventhPage">
+					<a href="#seventhPage">DESIGN</a>
+				</li>
+				<li data-menuanchor="eighthPage">
+					<a href="#eighthPage">CONTACT</a>
+				</li>
+			</ul>
+		</div>
+		<div id="fullpage">
+			<div class="section main">
+				<div class="anima">
+					<div class="animaBar"></div>
+				</div>
+				<div class="main_wrap">
+					<div class="contents">
+						<ul class="mainMenu">
+							<li data-menuanchor="firstPage">
+								<a href="#firstPage">MAIN</a>
+							</li>
+							<li data-menuanchor="secondPage">
+								<a href="#secondPage">ABOUT</a>
+							</li>
+							<li data-menuanchor="thirdPage">
+								<a href="#thirdPage">WEB</a>
+							</li>
+							<li data-menuanchor="seventhPage">
+								<a href="#seventhPage">DESIGN</a>
+							</li>
+							<li data-menuanchor="eighthPage">
+								<a href="#eighthPage">CONTACT</a>
+							</li>
+						</ul>
+						<span class="mbLine"></span>
+						<div class="text">
+							<div class="name">웹퍼블리셔<span> 정 동 민</span></div>
+							<div class="sub">
+								안녕하세요.<br />
+								안 되면 될 때까지 파고들어 <br class="mb_br" />
+								제 것으로 만드는<br />
+								성장하는 신입 웹퍼블리셔 <br class="mb_br" />
+								정동민입니다.<br />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section web_section about wst1">
+				<div class="about_wrap">
+					<div class="contents">
+						<div class="text">
+							<div class="text_wrap">
+								<div class="title">
+									JEONG<br />
+									DONGMIN
+								</div>
+								<div class="name">93.01.29</div>
+								<div class="sub">
+									wjdehdals145@naver.com <br />
+									+82 10 8229 6642
+								</div>
+							</div>
+							<div class="aboutBtn aboutBtnMb">
+								SKILLS
+								<img src="img/logoboxbtn1_mb.svg" alt="" />
+							</div>
+						</div>
+						<div class="aboutlogoBox">
+							<div class="logoBox_wrap">
+								<img src="img/profile.png" alt="" class="imgHover profilePC" />
+								<img src="img/profile2.png" alt="" class="imgHover profileMB" />
+
+								<div class="logoBoxHover">
+									<div class="title">SKILLS</div>
+									<div class="aboutBtn">
+										바로가기
+										<img src="img/logoboxbtn1.svg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="line">
+							<p class="p1">About</p>
+							<span></span>
+							<p class="p2">정동민</p>
+						</div>
+					</div>
+					<div class="contents2">
+						<div class="text">
+							<div class="text_wrap">
+								<div class="title">SOFTWARE<br />SKILLS</div>
+								<div class="name">OVER 5++</div>
+								<div class="sub">
+									HTML, CSS, JS, jquery,<br />
+									Photoshop, Illustrator, Figma
+								</div>
+							</div>
+							<div class="aboutBtn2 mb">ABOUT<img src="img/logoboxbtn1_mb.svg" alt="" /></div>
+						</div>
+						<span class="mbLine2"></span>
+						<div class="aboutlogoBox">
+							<div class="aboutBtn2 aboutBtn2pc"><img src="img/logoboxbtn2.svg" alt="" /></div>
+							<div class="logoBox_wrap">
+								<div class="slider slider1">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="img/skills1.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills2.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills3.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills4.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills5.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills6.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills7.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills1.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills2.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills3.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills4.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills5.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills6.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills7.png" alt="" />
+										</div>
+									</div>
+								</div>
+								<div class="slider slider2" dir="rtl">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img src="img/skills4.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills5.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills6.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills7.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills1.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills2.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills3.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills4.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills5.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills6.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills7.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills1.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills2.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills3.png" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="line">
+							<p class="p1">Skills</p>
+							<span></span>
+							<p class="p2">정동민</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section web_section wst wst1" id="nike">
+				<div class="webBg webBgNike"></div>
+				<div class="modalN_bg modal_bg modalX"></div>
+				<div class="modalN modal">
+					<div class="modalX modalBtnBox"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modal_wrap">
+						<div class="modal_wrapper">
+							<a href="http://ddrin.dothome.co.kr/nike/index.html" class="goBtn" target="_blank">
+								나이키 바로가기
+							</a>
+							<div class="info">
+								<div class="title">
+									<div class="name">NIKE</div>
+									<div class="date">2023. 11</div>
+								</div>
+								<table>
+									<tr>
+										<td>TYPE</td>
+										<td>반응형웹, Clone Coding</td>
+									</tr>
+									<tr>
+										<td>기술 스택</td>
+										<td>HTML, CSS, JS, jQuery, Swiper Js</td>
+									</tr>
+									<tr>
+										<td>참여도</td>
+										<td>100%(개인작업)</td>
+									</tr>
+									<tr>
+										<td>제작의도</td>
+										<td>이 사이트를 제작하게 된 이유는 솰라솰라</td>
+									</tr>
+									<tr class="url">
+										<td><img src="img/url.png" alt="" /> URL</td>
+										<td>
+											<a href="http://ddrin.dothome.co.kr/nike/index.html" target="_blank" class="mb"
+												>click!</a
+											>
+											<a href="http://ddrin.dothome.co.kr/nike/index.html" target="_blank" class="pc">
+												http://ddrin.dothome.co.kr/nike/index.html</a
+											>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="typo">
+								<div class="title">
+									<div class="name">Typography</div>
+								</div>
+								<table>
+									<tr class="font_family">
+										<td>Font Family</td>
+										<td>Noto Sans KR</td>
+									</tr>
+									<tr>
+										<td>Font Size</td>
+										<td class="size">
+											<img src="img/nike_size.svg" alt="" class="pc" />
+											<img src="img/nike_sizeMB.svg" alt="" class="mb" />
+										</td>
+									</tr>
+									<tr>
+										<td>Font Weight</td>
+										<td class="weight">
+											<span>Noto Sans KR Black 900</span><br />
+											<span>Noto Sans KR Bold 700</span><br />
+											<span>Noto Sans KR Medium 500</span><br />
+											<span>Noto Sans KR Regular 400</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="color">
+								<div class="title">
+									<div class="name">Color</div>
+								</div>
+								<table>
+									<tr class="bgColor">
+										<td>Background Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#F5F5F5</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="fontColor">
+										<td>Font Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#111111</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#757575</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#707072</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="lineColor">
+										<td>Line Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p>#DBDBDB</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="buttonColor">
+										<td>Button Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#111111</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#DADADA</p>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section_wrap">
+					<div class="contents">
+						<div class="logoBox nikeLinkBtn linkBtn">
+							<div class="text">
+								<div class="text_wrap">
+									<div class="title">NIKE.<br />JUST DO IT.</div>
+									<div class="name">NIKE KOREA<br />ONLINE STORE</div>
+									<div class="sub">RESPONSIVE WEP CLONE CODING</div>
+								</div>
+								<div class="nikeLinkBtn linkBtn linkBtnMB">
+									자세히 보기
+									<!-- <img src="img/logoboxbtn1_mb.svg" alt="" /> -->
+								</div>
+							</div>
+							<span class="mbLine2"></span>
+							<div class="logoBox_wrap">
+								<img src="img/나이키로고.png" alt="" />
+								<div class="line">
+									<p class="p1">Web Portfoilo</p>
+									<span></span>
+									<p class="p2"><span>01 </span>/04</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section web_section wst wst1" id="samcheop">
+				<div class="webBg webBgSamcheop"></div>
+				<div class="modalS_bg modal_bg modalX"></div>
+				<div class="modalS modal">
+					<div class="modalX modalBtnBox"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modal_wrap">
+						<div class="modal_wrapper">
+							<a href="http://ddrin.dothome.co.kr/samcheop/i/index.php" class="goBtn" target="_blank"
+								>삼첩분식 바로가기</a
+							>
+							<div class="info">
+								<div class="title">
+									<div class="name">삼첩분식</div>
+									<div class="date">2023. 09</div>
+								</div>
+								<table>
+									<tr>
+										<td>TYPE</td>
+										<td>반응형웹, Clone Coding</td>
+									</tr>
+									<tr>
+										<td>기술 스택</td>
+										<td>HTML, CSS, JS, jQuery, Swiper Js, AOS, Php included, Kakaomap Api, Font Awesome</td>
+									</tr>
+									<tr>
+										<td>참여도</td>
+										<td>100%(개인작업)</td>
+									</tr>
+									<tr>
+										<td>제작의도</td>
+										<td>이 사이트를 제작하게 된 이유는 솰라솰라</td>
+									</tr>
+									<tr class="url">
+										<td><img src="img/url.png" alt="" /> URL</td>
+										<td>
+											<a href="http://ddrin.dothome.co.kr/samcheop/i/index.php" class="pc"
+												>http://ddrin.dothome.co.kr/samcheop/i/index.php</a
+											>
+											<a href="http://ddrin.dothome.co.kr/samcheop/i/index.php" target="_blank" class="mb"
+												>click!</a
+											>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="typo">
+								<div class="title">
+									<div class="name">Typography</div>
+								</div>
+								<table>
+									<tr class="font_family">
+										<td>Font Family</td>
+										<td class="nx">Gmarket Sans<br /><span>NEXON Lv2 Gothic</span></td>
+									</tr>
+									<tr>
+										<td>Font Size</td>
+										<td class="size">
+											<img src="img/samcheop_size.svg" alt="" class="pc" />
+											<img src="img/samcheop_sizeMB.svg" alt="" class="mb" />
+										</td>
+									</tr>
+									<tr>
+										<td>Font Weight</td>
+										<td class="weight">
+											<span class="gm bold">Gmarket Sans Bold 700</span><br />
+											<span class="gm medium">Gmarket Sans Medium 500</span><br />
+											<span class="nx bold">NEXON Lv2 Gothic Bold 700</span><br />
+											<span class="nx medium">NEXON Lv2 Gothic Medium 500</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="color">
+								<div class="title">
+									<div class="name">Color</div>
+								</div>
+								<table>
+									<tr class="bgColor">
+										<td>Background Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#F6F3EA</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#E04B32</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="fontColor">
+										<td>Font Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#000000</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#989898</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#F0A500</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#542623</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#E04B32</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="lineColor">
+										<td>Line Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p>#E5E5E5</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#D1D1D1</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#E04B32</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="buttonColor">
+										<td>Button Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p>#E04B32</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#F0A500</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#F4B01B</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#FDF9EE</p>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section_wrap">
+					<div class="contents">
+						<div class="logoBox samcheopLinkBtn linkBtn">
+							<div class="text">
+								<div class="text_wrap">
+									<div class="title">떡볶이의<br />새로운 기준.</div>
+									<div class="name">삼첩분식</div>
+									<div class="sub">RESPONSIVE WEP CLONE CODING</div>
+								</div>
+								<div class="samcheopLinkBtn linkBtn linkBtnMB">자세히 보기</div>
+							</div>
+							<span class="mbLine2"></span>
+							<div class="logoBox_wrap">
+								<img src="img/삼첩분식로고.png" alt="" />
+								<div class="line">
+									<p class="p1">Web Portfoilo</p>
+									<span></span>
+									<p class="p2"><span>02 </span>/04</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section web_section wst wst1" id="dasoni">
+				<div class="webBg webBgDasoni"></div>
+				<div class="modalD_bg modal_bg modalX"></div>
+				<div class="modalD modal">
+					<div class="modalX modalBtnBox"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modal_wrap">
+						<div class="modal_wrapper">
+							<a href="http://ddrin.dothome.co.kr/dasoni/index.html" class="goBtn" target="_blank"
+								>다소니 바로가기</a
+							>
+							<div class="info">
+								<div class="title">
+									<div class="name">다소니 심리상담센터</div>
+									<div class="date">2023. 08</div>
+								</div>
+								<table>
+									<tr>
+										<td>TYPE</td>
+										<td>반응형웹, Clone Coding</td>
+									</tr>
+									<tr>
+										<td>기술 스택</td>
+										<td>HTML, CSS, JS, jQuery, Swiper Js, Font Awesome</td>
+									</tr>
+									<tr>
+										<td>참여도</td>
+										<td>100%(개인작업)</td>
+									</tr>
+									<tr>
+										<td>제작의도</td>
+										<td>이 사이트를 제작하게 된 이유는 솰라솰라</td>
+									</tr>
+									<tr class="url">
+										<td><img src="img/url.png" alt="" /> URL</td>
+										<td>
+											<a href="http://ddrin.dothome.co.kr/dasoni/index.html" class="pc"
+												>http://ddrin.dothome.co.kr/dasoni/index.html</a
+											>
+											<a href="http://ddrin.dothome.co.kr/dasoni/index.html" target="_blank" class="mb"
+												>click!</a
+											>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="typo">
+								<div class="title">
+									<div class="name">Typography</div>
+								</div>
+								<table>
+									<tr class="font_family">
+										<td>Font Family</td>
+										<td>NanumSquare<br /></td>
+									</tr>
+									<tr>
+										<td>Font Size</td>
+										<td class="size">
+											<img src="img/dasoni_size.svg" alt="" class="pc" />
+											<img src="img/dasoni_sizeMB.svg" alt="" class="mb" />
+										</td>
+									</tr>
+									<tr>
+										<td>Font Weight</td>
+										<td class="weight">
+											<span>NanumSquare ExtraBold 800</span><br />
+											<span>NanumSquarem Bold 700</span><br />
+											<span>NanumSquare Regular 400</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="color">
+								<div class="title">
+									<div class="name">Color</div>
+								</div>
+								<table>
+									<tr class="bgColor">
+										<td>Background Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#F9F9F9</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#222222</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="fontColor">
+										<td>Font Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#000000</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#FF8F2B</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#65B07E</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#4F3A53</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="lineColor">
+										<td>Line Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#000000</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="buttonColor">
+										<td>Button Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#000000</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#FF8F2B</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#65B07E</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#4F3A53</p>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section_wrap">
+					<div class="contents">
+						<div class="logoBox linkBtn dasoniLinkBtn">
+							<div class="text">
+								<div class="text_wrap">
+									<div class="title">정신건강의<br />형평성을 이루다.</div>
+									<div class="name">다소니 심리상담센터</div>
+									<div class="sub">RESPONSIVE WEP CLONE CODING</div>
+								</div>
+								<div class="dasoniLinkBtn linkBtn linkBtnMB">자세히 보기</div>
+							</div>
+							<span class="mbLine2"></span>
+							<div class="logoBox_wrap">
+								<img src="img/dasoni_logo.png" alt="" />
+								<div class="line">
+									<p class="p1">Web Portfoilo</p>
+									<span></span>
+									<p class="p2"><span>03 </span>/04</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section web_section wst wst1" id="halo">
+				<div class="webBg webBgHalo"></div>
+				<div class="modalH_bg modal_bg modalX"></div>
+				<div class="modalH modal">
+					<div class="modalX modalBtnBox"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modal_wrap">
+						<div class="modal_wrapper">
+							<a href="http://ddrin.dothome.co.kr/haloshop/index.html" class="goBtn" target="_blank">
+								헤일로샵 바로가기</a
+							>
+							<div class="info">
+								<div class="title">
+									<div class="name">헤일로샵</div>
+									<div class="date">2023. 12</div>
+								</div>
+								<table>
+									<tr>
+										<td>TYPE</td>
+										<td>반응형웹, Redesign Coding</td>
+									</tr>
+									<tr>
+										<td>기술 스택</td>
+										<td>Figma, HTML, CSS, JS, jQuery, Swiper Js, Font Awesome</td>
+									</tr>
+									<tr>
+										<td>참여도</td>
+										<td>100%(개인작업)</td>
+									</tr>
+									<tr>
+										<td>제작의도</td>
+										<td>이 사이트를 제작하게 된 이유는 솰라솰라</td>
+									</tr>
+									<tr class="url">
+										<td><img src="img/url.png" alt="" /> URL</td>
+										<td>
+											<a href="http://ddrin.dothome.co.kr/haloshop/index.html" class="pc"
+												>http://ddrin.dothome.co.kr/haloshop/index.html</a
+											>
+											<a href="http://ddrin.dothome.co.kr/haloshop/index.html" target="_blank" class="mb"
+												>click!</a
+											>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="typo">
+								<div class="title">
+									<div class="name">Typography</div>
+								</div>
+								<table>
+									<tr class="font_family">
+										<td>Font Family</td>
+										<td>Noto Sans KR<br /></td>
+									</tr>
+									<tr>
+										<td>Font Size</td>
+										<td class="size">
+											<img src="img/halo_size.svg" alt="" class="pc" />
+											<img src="img/halo_sizeMB.svg" alt="" class="mb" />
+										</td>
+									</tr>
+									<tr>
+										<td>Font Weight</td>
+										<td class="weight">
+											<span>Noto Sans KR Bold 700</span><br />
+											<span>Noto Sans KR Medium 500</span><br />
+											<span>Noto Sans KR Regular 400</span><br />
+											<span>Noto Sans KR Light 300</span>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="color">
+								<div class="title">
+									<div class="name">Color</div>
+								</div>
+								<table>
+									<tr class="bgColor">
+										<td>Background Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="fontColor">
+										<td>Font Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#000000</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#111111</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#505050</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#D1D1D1</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="lineColor">
+										<td>Line Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p>#EDEDED</p>
+											</div>
+										</td>
+									</tr>
+									<tr class="buttonColor">
+										<td>Button Color</td>
+										<td>
+											<div class="round">
+												<div></div>
+												<p class="colorWhite">#111111</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#FFFFFF</p>
+											</div>
+											<div class="round">
+												<div></div>
+												<p>#E5E5E5</p>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div class="figma">
+								<div class="title">
+									<div class="name">Guideline</div>
+								</div>
+								<div class="text">
+									<span>Total Width</span> 1280px <span>Colums</span> 12 <span>Gutter</span> 20px
+								</div>
+								<div class="img">
+									<img src="img/HALOfigma.svg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="section_wrap">
+					<div class="contents">
+						<div class="logoBox haloLinkBtn linkBtn">
+							<div class="text">
+								<div class="text_wrap">
+									<div class="title">우리가 사랑한<br />패션의 모든 것.</div>
+									<div class="name">헤일로샵</div>
+									<div class="sub">RESPONSIVE WEP REDESIGN CODING</div>
+								</div>
+								<div class="haloLinkBtn linkBtn linkBtnMB">자세히 보기</div>
+							</div>
+							<span class="mbLine2"></span>
+							<div class="logoBox_wrap">
+								<img src="img/헤일로샵로고.png" alt="" />
+								<div class="line">
+									<p class="p1">Web Portfoilo</p>
+									<span></span>
+									<p class="p2"><span>04 </span> /04</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section design">
+				<div class="designModal_bg designModalX"></div>
+				<div class="designModal designModal1">
+					<div class="designModal_wrap">
+						<div class="designModal_wrapper">
+							<div class="designModalX"><img src="img/logoboxbtn2.svg" alt="" /></div>
+							<div class="slider sliderDesign_1 m3slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="img/sliderDesign_1_1.svg" alt="" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/sliderDesign_1_2.svg" alt="" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/sliderDesign_1_3.svg" alt="" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/sliderDesign_1_4.svg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="designModal designModal2">
+					<div class="designModal_wrap">
+						<div class="designModal_wrapper">
+							<img src="img/ediya.png" alt="" />
+							<div class="designModalX"><img src="img/logoboxbtn2.svg" alt="" /></div>
+						</div>
+					</div>
+				</div>
+				<div class="designModal designModal3">
+					<div class="designModalX"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="designModal_wrap">
+						<div class="designModal_wrapper">
+							<div class="slider sliderDesign_2 m3slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="img/sliderDesign_2_1.svg" alt="" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/sliderDesign_2_2.svg" alt="" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/sliderDesign_2_3.svg" alt="" />
+									</div>
+									<div class="swiper-slide">
+										<img src="img/sliderDesign_2_4.svg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="design_wrap pc">
+					<div class="xbtn"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="title">DESIGN</div>
+					<ul class="box">
+						<li class="card boxhv">
+							<img src="img/card1.png" alt="" />
+							<div class="texthv">
+								<h2>김해시 피플앤스토리 <br />굿즈 공모전</h2>
+								<div class="img_wrap">
+									<img src="img/skills1.png" alt="" />
+								</div>
+								<div class="img_wrap">
+									<img src="img/skills2.png" alt="" />
+								</div>
+							</div>
+						</li>
+						<li class="ediya">
+							<img src="img/design2.png" alt="" />
+							<div class="texthv">
+								<h2>이디야 커피 포스터</h2>
+								<div class="img_wrap">
+									<img src="img/skills1.png" alt="" />
+								</div>
+							</div>
+						</li>
+						<li class="sonwrock">
+							<img src="img/design3.png" alt="" />
+							<div class="texthv">
+								<h2>SNOWROCK <br />배너 및 포스터</h2>
+								<div class="img_wrap">
+									<img src="img/skills1.png" alt="" />
+								</div>
+								<div class="img_wrap">
+									<img src="img/skills2.png" alt="" />
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="img">
+						<li class="img1">
+							<img src="img/card.png" alt="" />
+							<!-- <div>김해시 주최, 피플앤스토리 주관 율하카페거리 굿즈 아이디어 공모전 최우수상</div> -->
+						</li>
+						<li class="img2"><img src="img/ediya.png" alt="" /></li>
+						<li class="img3"><img src="img/snowrock.png" alt="" /></li>
+					</ul>
+				</div>
+
+				<div class="design_wrap mb">
+					<div class="contents">
+						<div class="slider sliderDesign_mb m3slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="title">DESIGN</div>
+								</div>
+								<div class="swiper-slide designModalBtn designModalBtn1">
+									<div class="slider_logo_box">
+										<img src="img/card1.png" alt="" />
+									</div>
+									<p>
+										굿즈 아이디어 공모전 최우수상<br />
+										<span>김해시 주최. 피플앤스토리 주관</span>
+									</p>
+								</div>
+								<div class="swiper-slide designModalBtn designModalBtn2">
+									<div class="slider_logo_box">
+										<img src="img/design2.png" alt="" />
+									</div>
+									<p>
+										포스터 디자인 <br />
+										<span>이디야커피</span>
+									</p>
+								</div>
+								<div class="swiper-slide designModalBtn designModalBtn3">
+									<div class="slider_logo_box">
+										<img src="img/design3.png" alt="" />
+									</div>
+									<p>
+										배너, 포스터 디자인 <br />
+										<span>스노우락</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section contact">
+				<div class="contact_wrap">
+					<div class="text">
+						<button id="button">
+							<div class="title">저와 함께하고 싶으시다면</div>
+							<p id="text">wjdehdals145@naver.com</p>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		// 반응형 topMenu
+		$('.topMenuMBBtn').click(function () {
+			if ($('.topMenuMB').hasClass('view')) {
+				$('.topMenuMB').removeClass('view');
+				$('.topMenuMBBtn').removeClass('view');
+			} else {
+				$('.topMenuMB').addClass('view');
+				$('.topMenuMBBtn').addClass('view');
+			}
+		});
+		// about
+		$('.imgHover').mouseover(function () {
+			$('.logoBoxHover').addClass('hover');
+		});
+		$('.imgHover').mouseout(function () {
+			$('.logoBoxHover').removeClass('hover');
+		});
+		$('.logoBoxHover').mouseover(function () {
+			$('.logoBoxHover').addClass('hover');
+		});
+		$('.logoBoxHover').mouseout(function () {
+			$('.logoBoxHover').removeClass('hover');
+		});
+		$('.aboutBtn').click(function () {
+			$('.contents').addClass('view');
+			$('.contents2').addClass('view');
+		});
+		$('.aboutBtn2').click(function () {
+			$('.contents').removeClass('view');
+			$('.contents2').removeClass('view');
+		});
+
+		var swiper = new Swiper('.slider1', {
+			loop: true,
+			autoplay: {
+				delay: 0,
+				disableOnInteraction: false,
+				observer: true,
+				observeParents: true,
+			},
+			speed: 2000,
+			breakpoints: {
+				530: {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+				0: {
+					slidesPerView: 3.5,
+					spaceBetween: 20,
+				},
+			},
+			observer: true,
+			observeParents: true,
+		});
+
+		var swiper = new Swiper('.slider2', {
+			loop: true,
+			autoplay: {
+				delay: 0,
+				disableOnInteraction: false,
+				observer: true,
+				observeParents: true,
+			},
+			speed: 2000,
+			breakpoints: {
+				530: {
+					slidesPerView: 5,
+					spaceBetween: 20,
+				},
+				0: {
+					slidesPerView: 3.5,
+					spaceBetween: 20,
+				},
+			},
+			observer: true,
+			observeParents: true,
+		});
+		// web
+		$('.haloLinkBtn').mouseover(function () {
+			$('.webBgHalo').addClass('webBgHover');
+		});
+		$('.dasoniLinkBtn').mouseover(function () {
+			$('.webBgDasoni').addClass('webBgHover');
+		});
+		$('.samcheopLinkBtn').mouseover(function () {
+			$('.webBgSamcheop').addClass('webBgHover');
+		});
+		$('.nikeLinkBtn').mouseover(function () {
+			$('.webBgNike').addClass('webBgHover');
+		});
+		$('.logoBox').mouseout(function () {
+			$('.webBg').removeClass('webBgHover');
+		});
+		// aos
+
+		// fullpage
+		$('#fullpage').fullpage({
+			anchors: [
+				'firstPage',
+				'secondPage',
+				'thirdPage',
+				'fourthPage',
+				'fifthPage',
+				'sixthPage',
+				'seventhPage',
+				'eighthPage',
+			],
+			menu: '#myMenu',
+			autoScrolling: true,
+			scrollBar: true, //기본 스크롤 이벤트(scrollY값 계산하는) 사라지지 않게
+			scrollingSpeed: 1200, //스크롤 속도 기본값 700
+			navigation: false,
+			paddingTop: '80px',
+			paddingBottom: '80px',
+			scrollOverflow: true,
+			scrollOverflowReset: true,
+			// normalScrollElements: '.img_popup_container,.img_popup_bg',
+			onLeave: function (index, nextIndex, direction) {
+				//스크롤 속도
+				if (index == 1) {
+					$.fn.fullpage.setScrollingSpeed(900);
+				} else {
+					$.fn.fullpage.setScrollingSpeed(900);
+				}
+				//웹 섹션 이동시 배경 디자인
+				if (window.innerWidth > 1200) {
+					$('.web_section').css({ '--afterWidth': '80%' });
+				} else {
+					$('.web_section').css({ '--afterWidth': '90%' });
+				}
+				$('.web_section').css({
+					'--afterHeight': '100%',
+					'--afterBg': '#ffffff44',
+				});
+				//클론코딩, 그래픽 섹션 마우스 커서 디자인
+				// if (nextIndex >= $('.section').length - 1) {
+				// 	$('#cursor').addClass('active');
+				// } else {
+				// 	$('#cursor').removeClass('active');
+				// }
+				if (
+					$('.section')
+						.eq(index - 1)
+						.is('.web_section')
+				) {
+					this.find('.webBg').removeClass('active');
+					this.find('.contents').removeClass('active');
+				}
+				//웹 섹션으로 이동시 헤더 네비게이션 활성화
+				if (
+					$('.section')
+						.eq(nextIndex - 1)
+						.is('.wst')
+				) {
+					$('#myMenu > li:nth-child(3)').addClass('subpage_on');
+				} else {
+					$('#myMenu > li:nth-child(3)').removeClass('subpage_on');
+				}
+			},
+			afterLoad: function (origin, destination, direction, trigger) {
+				//웹 섹션 이동 후 배경 디자인
+				// if (window.innerWidth > 800) {
+				// 	$('.web_section').css({
+				// 		'--afterWidth': '100%',
+				// 		'--afterHeight': '360px',
+				// 		// '--afterHeight' : '40%',
+				// 		'--afterBg': '#ffffff99',
+				// 	});
+				// } else {
+				// 	// $('.web_section').css({
+				// 	// 	'--afterWidth': '100%',
+				// 	// 	'--afterHeight': '680px',
+				// 	// 	'--afterBg': '#ffffffcc',
+				// 	// });
+				// }
+
+				if (
+					$('.section')
+						.eq(destination - 1)
+						.is('.web_section')
+				) {
+					this.find('.webBg').addClass('active');
+					this.find('.contents').addClass('active'); //배경 원
+					this.find('.mockup_all').addClass('scrollOn');
+					this.find('.info').addClass('scrollOn');
+				}
+				if ($('.main').hasClass('active')) {
+					$('header').addClass('none');
+					$('.rightButton').addClass('delay');
+				} else {
+					$('header').removeClass('none');
+					$('.rightButton').removeClass('delay');
+				}
+				if ($('.design').hasClass('active')) {
+					$('.design').addClass('active2');
+				} else {
+					$('.design').removeClass('active2');
+				}
+			},
+			//반응형
+			responsiveWidth: 1024,
+			afterResponsive: function (isResponsive) {
+				if (isResponsive) {
+					$.fn.fullpage.setAutoScrolling(false);
+				}
+			},
+		});
+		window.addEventListener('beforeunload', function () {
+			fullpage_api.silentMoveTo(1, 0);
+		});
+		// design
+		$('.card').click(function () {
+			$('.design_wrap').addClass('click1');
+			$('.design .title').css('opacity', '0');
+			$('.design_wrap').removeClass('click2');
+			$('.design_wrap').removeClass('click3');
+			$('.img1').css('opacity', '1');
+			$('.img1').css('z-index', '1000');
+			$('.img2').css('opacity', '0');
+			$('.img2').css('z-index', '0');
+			$('.img3').css('opacity', '0');
+			$('.img3').css('z-index', '0');
+			$('.img').css('display', 'block');
+			$('.xbtn').css('display', 'block');
+		});
+		$('.ediya').click(function () {
+			$('.design_wrap').addClass('click2');
+			$('.design .title').css('opacity', '0');
+			$('.design_wrap').removeClass('click1');
+			$('.design_wrap').removeClass('click3');
+			$('.img1').css('opacity', '0');
+			$('.img1').css('z-index', '0');
+			$('.img2').css('opacity', '1');
+			$('.img2').css('z-index', '1000');
+			$('.img3').css('opacity', '0');
+			$('.img3').css('z-index', '0');
+			$('.img').css('display', 'block');
+			$('.xbtn').css('display', 'block');
+		});
+		$('.sonwrock').click(function () {
+			$('.design_wrap').addClass('click3');
+			$('.design .title').css('opacity', '0');
+			$('.design_wrap').removeClass('click2');
+			$('.design_wrap').removeClass('click1');
+			$('.img1').css('opacity', '0');
+			$('.img1').css('z-index', '0');
+			$('.img2').css('opacity', '0');
+			$('.img2').css('z-index', '0');
+			$('.img3').css('opacity', '1');
+			$('.img3').css('z-index', '1000');
+			$('.img').css('display', 'block');
+			$('.xbtn').css('display', 'block');
+		});
+		$('.xbtn').click(function () {
+			$('.design_wrap').removeClass('click1');
+			$('.design .title').css('opacity', '1');
+			$('.design_wrap').removeClass('click2');
+			$('.design_wrap').removeClass('click3');
+			$('.img').css('display', 'none');
+			$('.xbtn').css('display', 'none');
+		});
+		// design 반응형
+		var swiper = new Swiper('.sliderDesign_mb', {
+			direction: 'horizontal',
+			loop: false,
+			breakpoints: {
+				0: {
+					slidesPerView: 1.2,
+					spaceBetween: 5,
+				},
+			},
+		});
+		// web 모달
+		$(function () {
+			$('.linkBtn').on('click', function () {
+				$('.header_wrap').css('opacity', '0');
+				// 모바일 사이드메뉴만 스크롤
+				$('body').on('scroll touchmove mousewheel', function (event) {
+					event.preventDefault();
+					event.stopPropagation();
+					return false;
+				});
+			});
+			$('.modalX').on('click', function () {
+				$('.modal').removeClass('view');
+				$('.modal_bg').removeClass('view');
+				$('.header_wrap').css('opacity', '1');
+
+				// 모바일 사이드메뉴만 스크롤
+				$('body').off('scroll touchmove mousewheel');
+			});
+
+			$('.nikeLinkBtn').on('click', function () {
+				$('.modalN').addClass('view');
+				$('.modalN_bg').addClass('view');
+			});
+
+			$('.samcheopLinkBtn').on('click', function () {
+				$('.modalS').addClass('view');
+				$('.modalS_bg').addClass('view');
+			});
+			$('.dasoniLinkBtn').on('click', function () {
+				$('.modalD').addClass('view');
+				$('.modalD_bg').addClass('view');
+			});
+			$('.haloLinkBtn').on('click', function () {
+				$('.modalH').addClass('view');
+				$('.modalH_bg').addClass('view');
+			});
+		});
+		// 반응형 모달 스크롤 막기
+		$(function () {
+			$('.linkBtnMB').click(function () {
+				$('body').attr('style', 'overflow: hidden !important');
+			});
+			$('.modalX').on('click', function () {
+				$('body').attr('style', 'overflow: visible !important');
+			});
+			$('.designModalBtn').click(function () {
+				$('body').attr('style', 'overflow: hidden !important');
+			});
+			$('.designModalX').on('click', function () {
+				$('body').attr('style', 'overflow: visible !important');
+			});
+		});
+		// 반응형 모달버튼 변경
+		$(window)
+			.resize(function () {
+				if (window.innerWidth < 1024) {
+					$('.logoBox.nikeLinkBtn').removeClass('nikeLinkBtn');
+					$('.logoBox.samcheopLinkBtn').removeClass('samcheopLinkBtn');
+					$('.logoBox.dasoniLinkBtn').removeClass('dasoniLinkBtn');
+					$('.logoBox.haloLinkBtn').removeClass('haloLinkBtn');
+				} else {
+					$('.logoBox.nikeLinkBtn').addClass('nikeLinkBtn');
+					$('.logoBox.samcheopLinkBtn').addClass('samcheopLinkBtn');
+					$('.logoBox.dasoniLinkBtn').addClass('dasoniLinkBtn');
+					$('.logoBox.haloLinkBtn').addClass('haloLinkBtn');
+
+					$('.logoBox').addClass('linkBtn');
+				}
+			})
+			.resize();
+
+		// design 반응형 모달
+		$('.designModalBtn').click(function () {
+			// $('.header_wrap').css('opacity', '0');
+			$('.designModal_bg').addClass('view');
+		});
+		$('.designModalX').click(function () {
+			$('.designModal').removeClass('view');
+			$('.designModal_bg').removeClass('view');
+		});
+		$('.designModalBtn1').click(function () {
+			$('.designModal1').addClass('view');
+		});
+		$('.designModalBtn2').click(function () {
+			$('.designModal2').addClass('view');
+		});
+		$('.designModalBtn3').click(function () {
+			$('.designModal3').addClass('view');
+		});
+		var swiper = new Swiper('.sliderDesign_1', {
+			direction: 'horizontal',
+			loop: false,
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+				},
+			},
+		});
+		var swiper = new Swiper('.sliderDesign_2', {
+			direction: 'horizontal',
+			loop: false,
+			breakpoints: {
+				530: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+				},
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+		// contact 복사
+		function copyClipboard() {
+			const text = document.getElementById('text').textContent;
+			const textarea = document.createElement('textarea');
+			textarea.textContent = text;
+			document.body.append(textarea);
+			textarea.select();
+			document.execCommand('copy');
+			textarea.remove();
+			alert('복사되었습니다.');
+		}
+
+		const button = document.getElementById('button');
+		button.addEventListener('click', copyClipboard);
+	</script>
+</html>
