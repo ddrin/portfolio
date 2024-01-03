@@ -36,6 +36,12 @@
 	font-style: normal;
 }
 @font-face {
+	font-family: 'Pretendard-Thin';
+	src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
 	font-family: 'NEXON Lv2 Gothic';
 	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
 	font-weight: normal;

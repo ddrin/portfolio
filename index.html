@@ -43,6 +43,7 @@
 				--font-family400: 'Pretendard-Regular';
 				--font-family300: 'Pretendard-Light';
 				--font-family200: 'Pretendard-ExtraLight';
+				--font-family100: 'Pretendard-Thin';
 			}
 			body {
 				overflow: hidden !important;
@@ -65,7 +66,8 @@
 				background: transparent;
 				position: fixed;
 				z-index: 800;
-				border-bottom: 1px solid #ddd;
+				border-bottom: solid #ddd;
+				border-width: 1px;
 				font-family: 'Pretendard-Medium';
 				color: #ddd;
 				mix-blend-mode: difference;
@@ -346,6 +348,9 @@
 				text-align: right;
 				color: rgba(255, 255, 255, 0.5);
 				line-height: 1.6;
+			}
+			.main .main_wrap .text .sub#mainTypeitmb {
+				display: none;
 			}
 
 			/* about */
@@ -862,7 +867,7 @@
 				border: 2px solid transparent;
 			}
 			.section .modal .modal_wrap::-webkit-scrollbar-track {
-				background-color: grey;
+				background-color: #fff;
 				border-radius: 10px;
 				box-shadow: inset 0px 0px 5px white;
 			}
@@ -1302,10 +1307,15 @@
 			.figma {
 				margin-top: 50px;
 			}
+			.section .modal .figma .title .name {
+				font-size: 24px;
+				padding: 4px 0;
+			}
 			.figma .img {
 				border: 1px solid rgba(0, 0, 0, 0.4);
 				margin-top: 10px;
 			}
+
 			.figma .text {
 				margin-top: 10px;
 				font-family: var(--font-family400);
@@ -1316,6 +1326,7 @@
 			.figma .img img {
 				width: 100%;
 			}
+
 			.colorWhite {
 				color: white;
 			}
@@ -1534,18 +1545,18 @@
 			.contact {
 			}
 			.contact .contact_wrap {
-				text-align: left;
-			}
-			.contact .contact_wrap .text {
 				display: flex;
 				justify-content: center;
 			}
+			.contact .contact_wrap .text {
+			}
 			.contact .contact_wrap .title {
-				font-size: 1vw;
-				font-family: var(--font-family400);
+				display: inline-block;
+				font-size: 5.5vw;
+				font-family: var(--font-family100);
 				position: relative;
 			}
-			.contact .contact_wrap .title::after {
+			/* .contact .contact_wrap .title::after {
 				content: '';
 				position: absolute;
 				top: 0;
@@ -1571,6 +1582,43 @@
 					left: 100%;
 					border: none;
 				}
+			} */
+			.contact .contact_wrap .text .arrBox {
+				width: 100%;
+				height: 300px;
+				position: relative;
+				display: flex;
+				justify-content: center;
+				overflow: hidden;
+				margin: 2vw 0;
+			}
+			.contact .contact_wrap .text .arrBox .arr {
+				position: absolute;
+				top: 0%;
+				transform: translateY(-100%);
+				animation: down 1.3s ease-in infinite;
+				opacity: 0;
+			}
+			.font-semibold {
+				display: inline-block;
+				font-family: var(--font-family700);
+				font-size: inherit;
+				line-height: inherit;
+			}
+			@keyframes down {
+				45% {
+					opacity: 1;
+				}
+				60% {
+					opacity: 1;
+				}
+				95% {
+					opacity: 0;
+				}
+				100% {
+					top: 100%;
+					transform: translateY(0%);
+				}
 			}
 			.contact .contact_wrap .text button {
 				background: none;
@@ -1578,6 +1626,7 @@
 				cursor: pointer;
 				display: flex;
 				flex-direction: column;
+				margin: 0 auto;
 			}
 			.contact .contact_wrap .text button #text {
 				font-family: var(--font-family500);
@@ -1586,14 +1635,13 @@
 				text-decoration: underline;
 				text-underline-position: under;
 				text-underline-offset: 0;
-				opacity: 0;
 			}
 
-			.contact.active .contact_wrap .text button #text {
+			/* .contact.active .contact_wrap .text button #text {
 				opacity: 1;
 				transition: 0.6s;
 				transition-delay: 2.3s;
-			}
+			} */
 			/* 반응형 */
 			.profileMB {
 				display: none;
@@ -1707,9 +1755,9 @@
 				}
 				.rightButton .rightButton_wrap > a {
 					padding: unset;
-					margin-top: 3px;
+					margin-top: 2px;
 				}
-				.rightButton .topMenuMBBtn {
+				.topMenuMBBtn {
 					height: 100%;
 					display: flex;
 					align-items: center;
@@ -1728,30 +1776,27 @@
 					width: 24px;
 					height: 2px;
 					background: #fff;
+					transition: 0.3s;
 				}
 				.rightButton .topMenuMBBtn.view > div span:nth-child(1) {
 					position: absolute;
 					width: 20px;
 					top: 50%;
 					left: 50%;
-					transform: translate(-50%, -50%) rotate(45deg);
+					transform: translate(-50%, -50%) rotate(225deg);
 				}
-				/* .rightButton .topMenuMBBtn.view > div span:nth-child(2) {
-					display: none;
-				} */
 				.rightButton .topMenuMBBtn.view > div span:nth-child(2) {
 					position: absolute;
 					width: 20px;
 					top: 50%;
 					left: 50%;
-					transform: translate(-50%, -50%) rotate(135deg);
+					transform: translate(-50%, -50%) rotate(-225deg);
 				}
 
 				.topMenuMB_wrap {
 					width: 100%;
 
 					background: #111;
-					opacity: 0.9;
 
 					position: fixed;
 					top: 0;
@@ -1785,7 +1830,7 @@
 				.topMenuMB li {
 					font-size: 8.5vw;
 					font-weight: 700;
-					font-family: var(--font-family900);
+					font-family: var(--font-family700);
 					line-height: 1;
 				}
 				.topMenuMB li:first-child {
@@ -1793,6 +1838,7 @@
 				}
 				.topMenuMB li a {
 					line-height: 1;
+					display: inline-block;
 				}
 				/* main */
 				.main .anima {
@@ -1876,6 +1922,12 @@
 					color: #fff;
 					margin-top: 15px;
 				}
+				.main .main_wrap .text .sub#mainTypeitmb {
+					display: inline-block;
+				}
+				.main .main_wrap .text .sub#mainTypeit {
+					display: none;
+				}
 				.mb_br {
 					display: none;
 				}
@@ -1954,6 +2006,7 @@
 					border-radius: 50px;
 					width: 97px;
 					height: 36px;
+					min-height: 36px;
 					background: #111;
 					cursor: pointer;
 					color: #fff;
@@ -2064,6 +2117,7 @@
 					border-radius: 50px;
 					width: 97px;
 					height: 36px;
+					min-height: 36px;
 					background: #111;
 					cursor: pointer;
 					color: #fff;
@@ -2279,7 +2333,7 @@
 					left: 50%;
 					transform: translate(-50%, -50%);
 					width: 100%;
-					z-index: 9999;
+					z-index: 1002;
 					box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 					/* overflow: hidden; */
 				}
@@ -2314,8 +2368,12 @@
 				}
 				.contact .contact_wrap .text {
 				}
+				.contact .contact_wrap .text .arrBox {
+					margin: 5vw 0;
+				}
 				.contact .contact_wrap .text .title {
-					font-size: 2.5vw;
+					font-size: 11vw;
+					line-height: 1;
 				}
 				.contact .contact_wrap .text button #text {
 					font-size: 4vw;
@@ -2334,13 +2392,16 @@
 					font-size: 75px;
 				}
 				.contact .contact_wrap .text .title {
-					font-size: 3.5vw;
+					font-size: 15vw;
 				}
 				.contact .contact_wrap .text button #text {
 					font-size: 5vw;
 				}
 				.topMenuMB li {
 					font-size: 75px;
+				}
+				.contact .contact_wrap .text .arrBox {
+					margin: 8vw 0;
 				}
 			}
 			@media only screen and (min-width: 100px) and (max-width: 530px) {
@@ -2478,10 +2539,13 @@
 					padding: 0 30px;
 				}
 				.contact .contact_wrap .text .title {
-					font-size: 4vw;
+					font-size: 15vw;
 				}
 				.contact .contact_wrap .text button #text {
 					font-size: 7vw;
+				}
+				.contact .contact_wrap .text .arrBox {
+					margin: 12vw 0;
 				}
 			}
 			@media only screen and (min-width: 100px) and (max-width: 390px) {
@@ -2574,19 +2638,19 @@
 		<div class="topMenuMB_wrap">
 			<ul class="topMenuMB">
 				<li data-menuanchor="firstPage">
-					<a href="#firstPage">MAIN</a>
+					<a href="#firstPage" class="topMenuMBBtn">MAIN</a>
 				</li>
 				<li data-menuanchor="secondPage">
-					<a href="#secondPage">ABOUT</a>
+					<a href="#secondPage" class="topMenuMBBtn">ABOUT</a>
 				</li>
 				<li data-menuanchor="thirdPage">
-					<a href="#thirdPage">WEB</a>
+					<a href="#thirdPage" class="topMenuMBBtn">WEB</a>
 				</li>
 				<li data-menuanchor="seventhPage">
-					<a href="#seventhPage">DESIGN</a>
+					<a href="#seventhPage" class="topMenuMBBtn">DESIGN</a>
 				</li>
 				<li data-menuanchor="eighthPage">
-					<a href="#eighthPage">CONTACT</a>
+					<a href="#eighthPage" class="topMenuMBBtn">CONTACT</a>
 				</li>
 			</ul>
 		</div>
@@ -2617,7 +2681,14 @@
 						<span class="mbLine"></span>
 						<div class="text">
 							<div class="name">웹퍼블리셔<span> 정 동 민</span></div>
-							<div class="sub">
+							<div class="sub" id="mainTypeit">
+								안녕하세요.<br />
+								안 되면 될 때까지 파고들어 <br class="mb_br" />
+								제 것으로 만드는<br />
+								성장하는 신입 웹퍼블리셔 <br class="mb_br" />
+								정동민입니다.<br />
+							</div>
+							<div class="sub" id="mainTypeitmb">
 								안녕하세요.<br />
 								안 되면 될 때까지 파고들어 <br class="mb_br" />
 								제 것으로 만드는<br />
@@ -2677,7 +2748,7 @@
 								<div class="title">SOFTWARE<br />SKILLS</div>
 								<div class="name">OVER 5++</div>
 								<div class="sub">
-									HTML, CSS, JS, jquery,<br />
+									HTML, CSS, JS, jquery, Git<br />
 									Photoshop, Illustrator, Figma
 								</div>
 							</div>
@@ -2711,6 +2782,9 @@
 											<img src="img/skills7.png" alt="" />
 										</div>
 										<div class="swiper-slide">
+											<img src="img/skills8.png" alt="" />
+										</div>
+										<div class="swiper-slide">
 											<img src="img/skills1.png" alt="" />
 										</div>
 										<div class="swiper-slide">
@@ -2730,6 +2804,9 @@
 										</div>
 										<div class="swiper-slide">
 											<img src="img/skills7.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills8.png" alt="" />
 										</div>
 									</div>
 								</div>
@@ -2748,6 +2825,9 @@
 											<img src="img/skills7.png" alt="" />
 										</div>
 										<div class="swiper-slide">
+											<img src="img/skills8.png" alt="" />
+										</div>
+										<div class="swiper-slide">
 											<img src="img/skills1.png" alt="" />
 										</div>
 										<div class="swiper-slide">
@@ -2767,6 +2847,9 @@
 										</div>
 										<div class="swiper-slide">
 											<img src="img/skills7.png" alt="" />
+										</div>
+										<div class="swiper-slide">
+											<img src="img/skills8.png" alt="" />
 										</div>
 										<div class="swiper-slide">
 											<img src="img/skills1.png" alt="" />
@@ -2963,7 +3046,8 @@
 				<div class="webBg webBgSamcheop"></div>
 				<div class="modalS_bg modal_bg modalX"></div>
 				<div class="modalS modal">
-					<div class="modalX modalBtnBox"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modalX modalBtnBox modalXpc pc"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modalX modalBtnBox modalXm mb"><img src="img/logoboxbtn2.svg" alt="" /></div>
 					<div class="modal_wrap">
 						<div class="modal_wrapper">
 							<a href="http://ddrin.dothome.co.kr/samcheop/i/index.php" class="goBtn" target="_blank"
@@ -3153,7 +3237,8 @@
 				<div class="webBg webBgDasoni"></div>
 				<div class="modalD_bg modal_bg modalX"></div>
 				<div class="modalD modal">
-					<div class="modalX modalBtnBox"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modalX modalBtnBox modalXpc pc"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modalX modalBtnBox modalXm mb"><img src="img/logoboxbtn2.svg" alt="" /></div>
 					<div class="modal_wrap">
 						<div class="modal_wrapper">
 							<a href="http://ddrin.dothome.co.kr/dasoni/index.html" class="goBtn" target="_blank"
@@ -3330,7 +3415,8 @@
 				<div class="webBg webBgHalo"></div>
 				<div class="modalH_bg modal_bg modalX"></div>
 				<div class="modalH modal">
-					<div class="modalX modalBtnBox"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modalX modalBtnBox modalXpc pc"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modalX modalBtnBox modalXm mb"><img src="img/logoboxbtn2.svg" alt="" /></div>
 					<div class="modal_wrap">
 						<div class="modal_wrapper">
 							<a href="http://ddrin.dothome.co.kr/haloshop/index.html" class="goBtn" target="_blank">
@@ -3650,8 +3736,13 @@
 			<div class="section contact">
 				<div class="contact_wrap">
 					<div class="text">
+						<div class="title" id="contactTypeit"></div>
+						<div class="arrBox">
+							<div class="arr">
+								<img src="img/contactarr.svg" alt="" />
+							</div>
+						</div>
 						<button id="button">
-							<div class="title">저와 함께하고 싶으시다면</div>
 							<p id="text">wjdehdals145@naver.com</p>
 						</button>
 					</div>
@@ -3936,6 +4027,8 @@
 		$(function () {
 			$('.linkBtn').on('click', function () {
 				$('.header_wrap').css('opacity', '0');
+				$('header').css('border-width', '0px');
+
 				// 모바일 사이드메뉴만 스크롤
 				$('body').on('scroll touchmove mousewheel', function (event) {
 					event.preventDefault();
@@ -3947,6 +4040,7 @@
 				$('.modal').removeClass('view');
 				$('.modal_bg').removeClass('view');
 				$('.header_wrap').css('opacity', '1');
+				$('header').css('border-width', '1px');
 
 				// 모바일 사이드메뉴만 스크롤
 				$('body').off('scroll touchmove mousewheel');
@@ -4058,8 +4152,41 @@
 			textarea.remove();
 			alert('복사되었습니다.');
 		}
-
 		const button = document.getElementById('button');
 		button.addEventListener('click', copyClipboard);
+
+		// main typeit
+		new TypeIt('#mainTypeit', {
+			speed: 50,
+			startDelay: 3000,
+			waitUntilVisible: true,
+		}).go();
+
+		new TypeIt('#mainTypeitmb', {
+			speed: 50,
+			startDelay: 500,
+			waitUntilVisible: true,
+		}).go();
+		// contact typeit
+
+		const instance = new TypeIt('#contactTypeit', {
+			strings: '저와 하고 싶으시다면',
+			speed: 100,
+			waitUntilVisible: true,
+		})
+			.move(-8, { speed: 100 })
+			.type('<p class="font-semibold">함께</p>', { speed: 100 })
+			.move(8)
+			.type('!')
+			.go();
+
+		document.querySelector('#freezeButton').addEventListener('click', function (e) {
+			if (instance.is('frozen')) {
+				instance.unfreeze();
+				return;
+			}
+
+			instance.freeze();
+		});
 	</script>
 </html>
