@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./lib/setup.css" type="text/css" />
+		<script src="./lib/jquery.js"></script>
+		<script src="https://kit.fontawesome.com/581fc6d10b.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="./lib/jquery.fullpage.js"></script>
+		<link rel="stylesheet" href="lib/jquery.fullpage.css" />
+
+		<style></style>
+	</head>
+	<body>
+		<button id="button"><p id="text">wjdehdals145@naver.com</p></button>
+	</body>
+	<script>
+		function copyClipboard() {
+			const text = document.getElementById('text').textContent;
+			const textarea = document.createElement('textarea');
+			textarea.textContent = text;
+			document.body.append(textarea);
+			textarea.select();
+			document.execCommand('copy');
+			textarea.remove();
+			alert('복사되었습니다, 감사합니다.');
+		}
+
+		const button = document.getElementById('button');
+		button.addEventListener('click', copyClipboard);
+	</script>
+</html>

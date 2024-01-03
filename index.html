@@ -41,13 +41,14 @@
 				--font-family700: 'Pretendard-Bold';
 				--font-family500: 'Pretendard-Medium';
 				--font-family400: 'Pretendard-Regular';
-				--font-family300: 'Pretendard-LIGHT';
+				--font-family300: 'Pretendard-Light';
+				--font-family200: 'Pretendard-ExtraLight';
 			}
 			body {
 				overflow: hidden !important;
 				color: var(--color-font1);
 				font-family: 'Pretendard-Black', 'Pretendard-ExtraBold', 'Pretendard-Medium', 'Pretendard-Regular',
-					'Pretendard-LIGHT';
+					'Pretendard-Light';
 				-webkit-user-select: none;
 				-moz-user-select: none;
 				-ms-user-select: none;
@@ -256,7 +257,7 @@
 			}
 
 			.main .main_wrap {
-				margin: 0 13% 0 4%;
+				margin: 0 13% 0 2%;
 
 				color: var(--color-font2);
 			}
@@ -286,7 +287,7 @@
 				/* font-family: var(--font-family900); */
 			}
 			.main .main_wrap .mainMenu li::before {
-				transition: all 0.75s 0s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+				transition: all 0.75s 0s cubic-bezier(0.68, -0.055, 0.245, 1.55);
 				content: '';
 				width: 0%;
 				height: 110%;
@@ -341,9 +342,10 @@
 			}
 			.main .main_wrap .text .sub {
 				font-size: 1.66vw;
-				font-family: var(--font-family300);
+				font-family: var(--font-family200);
 				text-align: right;
 				color: rgba(255, 255, 255, 0.5);
+				line-height: 1.6;
 			}
 
 			/* about */
@@ -389,6 +391,11 @@
 				font-size: 20px;
 				font-weight: 400;
 				font-family: var(--font-family500);
+				text-decoration: none;
+			}
+			.about .about_wrap .contents .text p {
+				display: inline-block;
+				font-size: inherit;
 			}
 			.about .about_wrap .contents .aboutlogoBox {
 				width: 100%;
@@ -1575,7 +1582,7 @@
 			.contact .contact_wrap .text button #text {
 				font-family: var(--font-family500);
 				color: var(--color-font1);
-				font-size: 3vw;
+				font-size: 5.5vw;
 				text-decoration: underline;
 				text-underline-position: under;
 				text-underline-offset: 0;
@@ -1606,6 +1613,9 @@
 			.topMenuMB {
 				display: none;
 			}
+			.modalXm {
+				display: none;
+			}
 			@media only screen and (min-width: 100px) and (max-width: 1024px) {
 				body {
 					overflow: visible !important;
@@ -1616,6 +1626,12 @@
 					display: none;
 				}
 				/* modal 반응형 */
+				.modalXm {
+					display: block;
+				}
+				.modalXpc {
+					display: none;
+				}
 				.section .modal {
 					width: 100%;
 					height: calc(100% - 60px);
@@ -1700,7 +1716,7 @@
 				}
 				.rightButton .topMenuMBBtn > div {
 					width: 30px;
-					height: 12px;
+					height: 8px;
 					display: flex;
 					flex-direction: column;
 					align-items: center;
@@ -1709,21 +1725,23 @@
 				}
 				.rightButton .topMenuMBBtn > div span {
 					display: inline-block;
-					width: 20px;
+					width: 24px;
 					height: 2px;
 					background: #fff;
 				}
 				.rightButton .topMenuMBBtn.view > div span:nth-child(1) {
 					position: absolute;
+					width: 20px;
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%) rotate(45deg);
 				}
-				.rightButton .topMenuMBBtn.view > div span:nth-child(2) {
+				/* .rightButton .topMenuMBBtn.view > div span:nth-child(2) {
 					display: none;
-				}
-				.rightButton .topMenuMBBtn.view > div span:nth-child(3) {
+				} */
+				.rightButton .topMenuMBBtn.view > div span:nth-child(2) {
 					position: absolute;
+					width: 20px;
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%) rotate(135deg);
@@ -2161,6 +2179,7 @@
 				/* design */
 				.design {
 					padding: 0 0 0 0%;
+					overflow: hidden;
 				}
 				.design .design_wrap.pc {
 					display: none;
@@ -2176,8 +2195,6 @@
 				.design .design_wrap.mb .contents {
 					width: 100%;
 					aspect-ratio: 3/4;
-
-					overflow: hidden;
 				}
 				.design .design_wrap.mb .contents .title {
 					color: var(--color-font1);
@@ -2550,7 +2567,6 @@
 					<div>
 						<span></span>
 						<span></span>
-						<span></span>
 					</div>
 				</div>
 			</div>
@@ -2623,8 +2639,11 @@
 								</div>
 								<div class="name">93.01.29</div>
 								<div class="sub">
-									wjdehdals145@naver.com <br />
-									+82 10 8229 6642
+									wjdehdals145
+									<p>@</p>
+									naver.com<br />
+									+82 10
+									<p>8229 6642</p>
 								</div>
 							</div>
 							<div class="aboutBtn aboutBtnMb">
@@ -2774,7 +2793,8 @@
 				<div class="webBg webBgNike"></div>
 				<div class="modalN_bg modal_bg modalX"></div>
 				<div class="modalN modal">
-					<div class="modalX modalBtnBox"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modalX modalBtnBox modalXpc pc"><img src="img/logoboxbtn2.svg" alt="" /></div>
+					<div class="modalX modalBtnBox modalXm mb"><img src="img/logoboxbtn2.svg" alt="" /></div>
 					<div class="modal_wrap">
 						<div class="modal_wrapper">
 							<a href="http://ddrin.dothome.co.kr/nike/index.html" class="goBtn" target="_blank">
@@ -3955,7 +3975,7 @@
 			$('.linkBtnMB').click(function () {
 				$('body').attr('style', 'overflow: hidden !important');
 			});
-			$('.modalX').on('click', function () {
+			$('.modalXm').on('click', function () {
 				$('body').attr('style', 'overflow: visible !important');
 			});
 			$('.designModalBtn').click(function () {
@@ -4005,6 +4025,7 @@
 		var swiper = new Swiper('.sliderDesign_1', {
 			direction: 'horizontal',
 			loop: false,
+			centeredSlides: true,
 			breakpoints: {
 				0: {
 					slidesPerView: 1,

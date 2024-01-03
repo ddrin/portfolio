@@ -1,0 +1,67 @@
+span {
+	font-size: inherit;
+}
+
+.charts {
+	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.charts .chart {
+	margin: 20px;
+	position: relative;
+}
+.charts .chart p {
+	position: absolute;
+	top: -10%;
+	left: 50%;
+	transform: translatex(-50%);
+}
+.charts .chart h2 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 26px;
+}
+.charts .chart svg {
+	width: 220px;
+	height: 220px;
+}
+.charts .chart svg circle {
+	fill: #ededed;
+	/* svg는 html속성이기 때문에 보더가 아니라 스트로크 */
+	stroke-width: 20px;
+	stroke-dasharray: 630;
+	stroke-dashoffset: 630;
+	/* animation: line 2s forwards; */
+	transform: rotate(-90deg);
+	/* 중심점 가운데로 */
+	transform-origin: 50% 50%;
+	/* svg에서 라인끝 바꿀때 */
+	stroke-linecap: round;
+}
+/* @keyframes line {
+	from {
+		stroke-dashoffset: 630;
+	}
+	to {
+		stroke-dashoffset: 504;
+	}
+} */
+.charts .chart:nth-child(1) circle {
+	stroke: #ffc114;
+}
+.charts .chart:nth-child(2) circle {
+	stroke: #ff5248;
+}
+.charts .chart:nth-child(3) circle {
+	stroke: #19cdca;
+}
+.charts .chart:nth-child(4) circle {
+	stroke: #4e88e1;
+}
+
+section {
+	height: 100vh;
+}
