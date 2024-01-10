@@ -142,14 +142,30 @@
 					opacity: 1;
 				}
 			}
-			.rightButton > a span.span {
-				/* margin-bottom: 60px; */
-			}
 			.rightButton .rightButton_wrap > a {
 				display: grid;
 				grid-template-columns: repeat(18, 1fr);
 				padding: 110px 0 50px;
 				font-size: 1.4359vh;
+				position: relative;
+				transition: 0.3s;
+			}
+			.rightButton .rightButton_wrap > a:hover {
+				padding: 120px 0 40px;
+			}
+			.rightButton .rightButton_wrap > a:hover::after {
+				opacity: 1;
+			}
+			.rightButton .rightButton_wrap > a::after {
+				content: '↑';
+				position: absolute;
+				top: 90px;
+				left: 50%;
+				transform: translateX(-50%);
+				height: 30px;
+				font-size: 24px;
+				opacity: 0;
+				transition: 0.3s;
 			}
 			.rightButton .rightButton_wrap > a span:last-child {
 				margin: 0;
@@ -343,11 +359,12 @@
 				font-size: 4.15vw;
 			}
 			.main .main_wrap .text .sub {
-				font-size: 1.66vw;
+				font-size: 26px;
 				font-family: var(--font-family200);
 				text-align: right;
 				color: rgba(255, 255, 255, 0.5);
 				line-height: 1.6;
+				height: 208px;
 			}
 			.main .main_wrap .text .sub#mainTypeitmb {
 				display: none;
@@ -879,9 +896,9 @@
 				width: 100%;
 				position: relative;
 				overflow: auto;
-				margin-top: 25px;
+				margin-top: 15px;
 				height: calc(100% - 25px);
-				padding-bottom: 110px;
+				padding: 71px 0 110px;
 			}
 			.section .modal .modal_wrap .modal_wrapper {
 				max-width: 900px;
@@ -1664,6 +1681,10 @@
 			.modalXm {
 				display: none;
 			}
+			#contactTypeitmb {
+				display: none;
+			}
+
 			@media only screen and (min-width: 100px) and (max-width: 1024px) {
 				body {
 					overflow: visible !important;
@@ -1685,7 +1706,7 @@
 					height: calc(100% - 60px);
 				}
 				.section .modal .modal_wrap {
-					padding: 20px 5% 110px;
+					padding: 51px 5% 110px;
 				}
 				.section .modal .modal_wrap > div tr td:first-child {
 				}
@@ -1698,9 +1719,11 @@
 				}
 				.section .modal table tr td:first-child {
 					font-size: 18px;
+					padding-bottom: 0;
 				}
 				.section .modal table tr td:last-child {
 					font-size: 14px;
+					padding-top: 0px;
 				}
 				.section .modal .title {
 					gap: 0px;
@@ -1728,7 +1751,7 @@
 				}
 				header .header_wrap {
 				}
-				header .header_wrap #myMenu {
+				header .header_wrap .myMenu {
 					display: none;
 				}
 				.rightButton {
@@ -1756,6 +1779,12 @@
 				.rightButton .rightButton_wrap > a {
 					padding: unset;
 					margin-top: 2px;
+				}
+				.rightButton .rightButton_wrap > a:hover {
+					padding: unset;
+				}
+				.rightButton .rightButton_wrap > a::after {
+					display: none;
 				}
 				.topMenuMBBtn {
 					height: 100%;
@@ -1796,7 +1825,7 @@
 				.topMenuMB_wrap {
 					width: 100%;
 
-					background: #111;
+					background: #fbfbfd;
 
 					position: fixed;
 					top: 0;
@@ -1815,10 +1844,10 @@
 
 					display: flex;
 					flex-direction: column;
-					justify-content: flex-start;
+					justify-content: center;
 
 					font-family: var(--font-family400);
-					color: var(--color-font2);
+					color: var(--color-font1);
 
 					text-align: left;
 				}
@@ -1833,8 +1862,13 @@
 					font-family: var(--font-family700);
 					line-height: 1;
 				}
-				.topMenuMB li:first-child {
+				.topMenuMB li.active {
 					color: var(--color-font3);
+				}
+				.topMenuMB li.subpage_on {
+					color: var(--color-font3);
+				}
+				.topMenuMB li:first-child {
 				}
 				.topMenuMB li a {
 					line-height: 1;
@@ -1917,10 +1951,11 @@
 					font-size: 2.6vw;
 				}
 				.main .main_wrap .text .sub {
-					font-size: 1.55vw;
+					font-size: 16px;
 					text-align: left;
 					color: #fff;
 					margin-top: 15px;
+					height: 77px;
 				}
 				.main .main_wrap .text .sub#mainTypeitmb {
 					display: inline-block;
@@ -1945,7 +1980,7 @@
 					justify-content: flex-end;
 
 					aspect-ratio: 3/4;
-					border-radius: 20px;
+					/* border-radius: 20px; */
 					box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 				}
 				.about .about_wrap .contents .text {
@@ -1958,7 +1993,7 @@
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
-					height: 50%;
+					height: 60%;
 				}
 				.about .about_wrap .contents .text .text_wrap {
 					display: flex;
@@ -1979,7 +2014,7 @@
 					font-size: 1.4vw;
 				}
 				.about .about_wrap .contents .aboutlogoBox {
-					height: 50%;
+					height: 40%;
 				}
 				.about .about_wrap .contents .aboutlogoBox .logoBox_wrap {
 					width: 100%;
@@ -1987,7 +2022,7 @@
 					display: flex;
 					justify-content: center;
 					overflow: hidden;
-					border-radius: 20px 20px 0 0;
+					/* border-radius: 20px 20px 0 0; */
 				}
 				.about .about_wrap .contents .aboutlogoBox img {
 					cursor: default;
@@ -2016,6 +2051,12 @@
 					gap: 5px;
 					/* padding-top: 1px; */
 				}
+				.profilePC {
+					display: none;
+				}
+				.profileMB {
+					display: block;
+				}
 				.about .aboutBtnMb img {
 					mix-blend-mode: difference;
 				}
@@ -2037,7 +2078,7 @@
 					justify-content: flex-end;
 
 					aspect-ratio: 3/4;
-					border-radius: 20px;
+					/* border-radius: 20px; */
 					overflow: hidden;
 					box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 				}
@@ -2050,7 +2091,7 @@
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
-					height: 50%;
+					height: 60%;
 				}
 				.about .about_wrap .contents2 .text .text_wrap {
 					display: flex;
@@ -2071,7 +2112,7 @@
 					font-size: 1.4vw;
 				}
 				.about .about_wrap .contents2 .aboutlogoBox {
-					height: 50%;
+					height: 40%;
 					border: none;
 				}
 				.about .about_wrap .contents2 .aboutlogoBox .logoBox_wrap {
@@ -2164,7 +2205,7 @@
 					height: 100%;
 					flex-direction: column-reverse;
 					align-items: unset;
-					border-radius: 20px;
+					/* border-radius: 20px; */
 					cursor: default;
 				}
 				.section .section_wrap .contents .text {
@@ -2371,12 +2412,20 @@
 				.contact .contact_wrap .text .arrBox {
 					margin: 5vw 0;
 				}
-				.contact .contact_wrap .text .title {
-					font-size: 11vw;
+				.contact .contact_wrap .title {
+					font-size: 85px;
 					line-height: 1;
+					height: 170px;
 				}
 				.contact .contact_wrap .text button #text {
 					font-size: 4vw;
+				}
+				#contactTypeitmb {
+					display: inline-block;
+				}
+
+				#contactTypeit {
+					display: none;
 				}
 			}
 			@media only screen and (min-width: 100px) and (max-width: 850px) {
@@ -2391,8 +2440,9 @@
 				.main .main_wrap .mainMenu li a {
 					font-size: 75px;
 				}
-				.contact .contact_wrap .text .title {
-					font-size: 15vw;
+				.contact .contact_wrap .title {
+					font-size: 75px;
+					height: 150px;
 				}
 				.contact .contact_wrap .text button #text {
 					font-size: 5vw;
@@ -2445,7 +2495,7 @@
 					font-size: 5.5vw;
 				}
 				.main .main_wrap .text .sub {
-					font-size: 3.5vw;
+					/* font-size: 3.5vw; */
 				}
 				/* about */
 
@@ -2464,19 +2514,11 @@
 				.about .about_wrap .contents .text .sub {
 					font-size: 3vw;
 				}
-				.profilePC {
-					display: none;
-				}
-				.profileMB {
-					display: block;
-				}
+
 				.about .about_wrap .contents .line > span {
 					width: 70%;
 				}
 				.about .about_wrap .contents2 .text {
-					justify-content: space-between;
-					gap: 1vw;
-					height: 50%;
 				}
 				.about .about_wrap .contents2 .text .title {
 					font-size: 10vw;
@@ -2538,8 +2580,8 @@
 				.contact .contact_wrap {
 					padding: 0 30px;
 				}
-				.contact .contact_wrap .text .title {
-					font-size: 15vw;
+				.contact .contact_wrap .title {
+					font-size: 14vw;
 				}
 				.contact .contact_wrap .text button #text {
 					font-size: 7vw;
@@ -2549,51 +2591,8 @@
 				}
 			}
 			@media only screen and (min-width: 100px) and (max-width: 390px) {
-				.about .about_wrap .contents .text {
-					gap: 10px;
-					height: 47%;
-					justify-content: center;
-				}
-				.about .about_wrap .contents .text .title {
-					font-size: 8vw;
-					line-height: 8vw;
-				}
-				.about .about_wrap .contents .text .name {
-					font-size: 4vw;
-					line-height: 4vw;
-				}
-				.about .about_wrap .contents .text .sub {
-					font-size: 2.5vw;
-				}
-				.about .about_wrap .contents2 .text {
-					justify-content: flex-start;
-					gap: 10px;
-					height: 47%;
-				}
-				.about .about_wrap .contents2 .text .title {
-					font-size: 8vw;
-					line-height: 8vw;
-				}
-				.about .about_wrap .contents2 .text .name {
-					font-size: 4vw;
-					line-height: 4vw;
-				}
-				.about .about_wrap .contents2 .text .sub {
-					font-size: 2.5vw;
-				}
-				.section .section_wrap .contents .text .title {
-					font-size: 8vw;
-					line-height: 8vw;
-				}
-				.section .section_wrap .contents .text .name {
-					font-size: 4vw;
-					line-height: 4vw;
-				}
-				.section .section_wrap .contents .text .sub {
-					font-size: 2.5vw;
-				}
-				.section .section_wrap .contents .line > span {
-					/* width: 45%; */
+				.contact .contact_wrap .title {
+					height: 120px;
 				}
 			}
 		</style>
@@ -2601,7 +2600,7 @@
 	<body>
 		<header>
 			<div class="header_wrap">
-				<ul id="myMenu">
+				<ul class="myMenu">
 					<li data-menuanchor="firstPage">
 						<a href="#firstPage">Main</a>
 					</li>
@@ -2636,7 +2635,7 @@
 			</div>
 		</h1>
 		<div class="topMenuMB_wrap">
-			<ul class="topMenuMB">
+			<ul class="topMenuMB myMenu">
 				<li data-menuanchor="firstPage">
 					<a href="#firstPage" class="topMenuMBBtn">MAIN</a>
 				</li>
@@ -2709,13 +2708,10 @@
 									DONGMIN
 								</div>
 								<div class="name">93.01.29</div>
-								<div class="sub">
-									wjdehdals145
-									<p>@</p>
-									naver.com<br />
-									+82 10
-									<p>8229 6642</p>
-								</div>
+								<a class="sub">
+									wjdehdals145@naver.com<br />
+									+82 10 8229 6642
+								</a>
 							</div>
 							<div class="aboutBtn aboutBtnMb">
 								SKILLS
@@ -2748,7 +2744,7 @@
 								<div class="title">SOFTWARE<br />SKILLS</div>
 								<div class="name">OVER 5++</div>
 								<div class="sub">
-									HTML, CSS, JS, jquery, Git<br />
+									HTML, CSS, Sass(SCSS), JS, jquery, Git<br />
 									Photoshop, Illustrator, Figma
 								</div>
 							</div>
@@ -2880,9 +2876,7 @@
 					<div class="modalX modalBtnBox modalXm mb"><img src="img/logoboxbtn2.svg" alt="" /></div>
 					<div class="modal_wrap">
 						<div class="modal_wrapper">
-							<a href="http://ddrin.dothome.co.kr/nike/index.html" class="goBtn" target="_blank">
-								나이키 바로가기
-							</a>
+							<a href="http://ddrnin.store/nike" class="goBtn" target="_blank"> 나이키 바로가기 </a>
 							<div class="info">
 								<div class="title">
 									<div class="name">NIKE</div>
@@ -2908,11 +2902,9 @@
 									<tr class="url">
 										<td><img src="img/url.png" alt="" /> URL</td>
 										<td>
-											<a href="http://ddrin.dothome.co.kr/nike/index.html" target="_blank" class="mb"
-												>click!</a
-											>
-											<a href="http://ddrin.dothome.co.kr/nike/index.html" target="_blank" class="pc">
-												http://ddrin.dothome.co.kr/nike/index.html</a
+											<a href="http://ddrnin.store/nike" target="_blank" class="mb">click!</a>
+											<a href="http://ddrnin.store/nike" target="_blank" class="pc">
+												http://ddrnin.store/nike</a
 											>
 										</td>
 									</tr>
@@ -3050,9 +3042,7 @@
 					<div class="modalX modalBtnBox modalXm mb"><img src="img/logoboxbtn2.svg" alt="" /></div>
 					<div class="modal_wrap">
 						<div class="modal_wrapper">
-							<a href="http://ddrin.dothome.co.kr/samcheop/i/index.php" class="goBtn" target="_blank"
-								>삼첩분식 바로가기</a
-							>
+							<a href="http://ddrnin.store/samcheop/i" class="goBtn" target="_blank">삼첩분식 바로가기</a>
 							<div class="info">
 								<div class="title">
 									<div class="name">삼첩분식</div>
@@ -3078,12 +3068,8 @@
 									<tr class="url">
 										<td><img src="img/url.png" alt="" /> URL</td>
 										<td>
-											<a href="http://ddrin.dothome.co.kr/samcheop/i/index.php" class="pc"
-												>http://ddrin.dothome.co.kr/samcheop/i/index.php</a
-											>
-											<a href="http://ddrin.dothome.co.kr/samcheop/i/index.php" target="_blank" class="mb"
-												>click!</a
-											>
+											<a href="http://ddrnin.store/samcheop/i" class="pc">http://ddrnin.store/samcheop/i</a>
+											<a href="http://ddrnin.store/samcheop/i" target="_blank" class="mb">click!</a>
 										</td>
 									</tr>
 								</table>
@@ -3241,9 +3227,7 @@
 					<div class="modalX modalBtnBox modalXm mb"><img src="img/logoboxbtn2.svg" alt="" /></div>
 					<div class="modal_wrap">
 						<div class="modal_wrapper">
-							<a href="http://ddrin.dothome.co.kr/dasoni/index.html" class="goBtn" target="_blank"
-								>다소니 바로가기</a
-							>
+							<a href="http://ddrnin.store/dasoni" class="goBtn" target="_blank">다소니 바로가기</a>
 							<div class="info">
 								<div class="title">
 									<div class="name">다소니 심리상담센터</div>
@@ -3269,12 +3253,8 @@
 									<tr class="url">
 										<td><img src="img/url.png" alt="" /> URL</td>
 										<td>
-											<a href="http://ddrin.dothome.co.kr/dasoni/index.html" class="pc"
-												>http://ddrin.dothome.co.kr/dasoni/index.html</a
-											>
-											<a href="http://ddrin.dothome.co.kr/dasoni/index.html" target="_blank" class="mb"
-												>click!</a
-											>
+											<a href="http://ddrnin.store/dasoni" class="pc">http://ddrnin.store/dasoni</a>
+											<a href="http://ddrnin.store/dasoni" target="_blank" class="mb">click!</a>
 										</td>
 									</tr>
 								</table>
@@ -3419,9 +3399,7 @@
 					<div class="modalX modalBtnBox modalXm mb"><img src="img/logoboxbtn2.svg" alt="" /></div>
 					<div class="modal_wrap">
 						<div class="modal_wrapper">
-							<a href="http://ddrin.dothome.co.kr/haloshop/index.html" class="goBtn" target="_blank">
-								헤일로샵 바로가기</a
-							>
+							<a href="http://ddrnin.store/haloshop" class="goBtn" target="_blank"> 헤일로샵 바로가기</a>
 							<div class="info">
 								<div class="title">
 									<div class="name">헤일로샵</div>
@@ -3447,12 +3425,8 @@
 									<tr class="url">
 										<td><img src="img/url.png" alt="" /> URL</td>
 										<td>
-											<a href="http://ddrin.dothome.co.kr/haloshop/index.html" class="pc"
-												>http://ddrin.dothome.co.kr/haloshop/index.html</a
-											>
-											<a href="http://ddrin.dothome.co.kr/haloshop/index.html" target="_blank" class="mb"
-												>click!</a
-											>
+											<a href="http://ddrnin.store/haloshop" class="pc">http://ddrnin.store/haloshop</a>
+											<a href="http://ddrnin.store/haloshop" target="_blank" class="mb">click!</a>
 										</td>
 									</tr>
 								</table>
@@ -3736,14 +3710,18 @@
 			<div class="section contact">
 				<div class="contact_wrap">
 					<div class="text">
-						<div class="title" id="contactTypeit"></div>
+						<div class="title" id="contactTypeit">저와 함께 하고 싶으시다면</div>
+						<div class="title" id="contactTypeitmb">
+							저와 함께 하고 <br />
+							싶으시다면
+						</div>
 						<div class="arrBox">
 							<div class="arr">
 								<img src="img/contactarr.svg" alt="" />
 							</div>
 						</div>
 						<button id="button">
-							<p id="text">wjdehdals145@naver.com 이거 주차</p>
+							<a id="text">wjdehdals145@naver.com</a>
 						</button>
 					</div>
 				</div>
@@ -3858,7 +3836,7 @@
 				'seventhPage',
 				'eighthPage',
 			],
-			menu: '#myMenu',
+			menu: '.myMenu',
 			autoScrolling: true,
 			scrollBar: true, //기본 스크롤 이벤트(scrollY값 계산하는) 사라지지 않게
 			scrollingSpeed: 1200, //스크롤 속도 기본값 700
@@ -3905,9 +3883,9 @@
 						.eq(nextIndex - 1)
 						.is('.wst')
 				) {
-					$('#myMenu > li:nth-child(3)').addClass('subpage_on');
+					$('.myMenu > li:nth-child(3)').addClass('subpage_on');
 				} else {
-					$('#myMenu > li:nth-child(3)').removeClass('subpage_on');
+					$('.myMenu > li:nth-child(3)').removeClass('subpage_on');
 				}
 			},
 			afterLoad: function (origin, destination, direction, trigger) {
@@ -3932,8 +3910,8 @@
 						.eq(destination - 1)
 						.is('.web_section')
 				) {
-					this.find('.webBg').addClass('active');
-					this.find('.contents').addClass('active'); //배경 원
+					this.find('.webBg').addClass('actve');
+					this.find('.contents').addClass('active');
 					this.find('.mockup_all').addClass('scrollOn');
 					this.find('.info').addClass('scrollOn');
 				}
@@ -4158,7 +4136,7 @@
 		// main typeit
 		new TypeIt('#mainTypeit', {
 			speed: 50,
-			startDelay: 3000,
+			startDelay: 3300,
 			waitUntilVisible: true,
 		}).go();
 
@@ -4169,24 +4147,15 @@
 		}).go();
 		// contact typeit
 
-		const instance = new TypeIt('#contactTypeit', {
-			strings: '저와 하고 싶으시다면',
-			speed: 100,
+		new TypeIt('#contactTypeit', {
+			speed: 60,
+			startDelay: 200,
 			waitUntilVisible: true,
-		})
-			.move(-8, { speed: 100 })
-			.type('<p class="font-semibold">함께</p>', { speed: 100 })
-			.move(8)
-			.type('!')
-			.go();
-
-		document.querySelector('#freezeButton').addEventListener('click', function (e) {
-			if (instance.is('frozen')) {
-				instance.unfreeze();
-				return;
-			}
-
-			instance.freeze();
-		});
+		}).go();
+		new TypeIt('#contactTypeitmb', {
+			speed: 50,
+			startDelay: 200,
+			waitUntilVisible: true,
+		}).go();
 	</script>
 </html>

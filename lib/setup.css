@@ -41,7 +41,9 @@ body {
 
 .pc {
 }
-
+p {
+	text-decoration: none;
+}
 .mobile {
 }
 
